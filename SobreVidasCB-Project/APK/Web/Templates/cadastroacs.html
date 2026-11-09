@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style/cadastroacs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/logo.png">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+
+}
+
+body {
+    background-color: black;
+}
+
+
+
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 400px;
+    padding-top: 400px;
+    flex-direction: row;
+    margin-top: -400px;
+
+}
+
+.titulo {
+
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+    margin-left: 157px;
+    line-height: px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(255, 248, 248);
+
+
+
+
+}
+#dds{
+    margin-top: -150px;
+}
+header{
+    display: grid;
+    grid-template: auto / 1fr 3fr;
+    margin-bottom: 150px;
+    margin-inline: 30px;
+}
+
+#btnvoltar{
+
+    filter: drop-shadow(5px 5px 6px gray);
+}
+#btnvoltar:hover{
+    transform: translateY(-3px);
+}
+form {
+    background: #9BCCFA;
+    width: 744px;
+    height: 689px;
+    border-radius: 5%;
+    align-content: center;
+    display: inline-block;
+    position: absolute;
+
+}
+
+.box {
+    background: #ffffff;
+    width: 713px;
+    height: 958px;
+    padding: 16px;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    margin-top: -45px;
+    position: absolute;
+
+}
+
+.logo {
+    margin-left: 145px;
+    display: block;
+    width: 161px;
+    height: 161px;
+    position: absolute;
+    top: 25px;
+
+
+}
+
+.logo2 {
+    text-align: center;
+    width: 18px;
+    width: 310px;
+    height: 120px;
+    color: #2260FF;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    word-wrap: break-word;
+    margin-left: 310px;
+    display: block;
+    margin-top: 2dvh;
+    position: absolute;
+
+
+
+
+
+}
+
+.form {
+    color: #03314B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    display: flex;
+    left: 35px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.form2 {
+    color: #03314B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    word-wrap: normal;
+    padding-left: 30px;
+    margin-top: 410px;
+    position: absolute;
+}
+
+
+.input-group {
+    position: absolte;
+    margin-top: 190px;
+    margin-left: 10px;
+
+
+}
+
+.input {
+    padding-left: 10px;
+    margin-left: 48px;
+    margin-top: 60px;
+    border-radius: 10px;
+    width: 615px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: inline-block;
+    outline: 2px solid #fff;
+
+}
+
+.input2 {
+    padding-left: 10px;
+    margin-left: 48px;
+    margin-top: 130px;
+    border-radius: 10px;
+    width: 615px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input3 {
+    padding-left: 10px;
+    margin-left: 48px;
+    margin-top: 200px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input21 {
+    padding-left: 20px;
+    margin-left: 48px;
+    margin-top: 262px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input4 {
+    padding-left: 10px;
+    margin-left: 370px;
+    margin-top: 200px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input20 {
+    padding-left: 10px;
+    margin-left: 370px;
+    margin-top: 208px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input5 {
+    padding-left: 10px;
+    margin-left: 48px;
+    margin-top: 270px;
+    border-radius: 10px;
+    width: 615px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input10 {
+
+    padding-left: 10px;
+    margin-left: 48px;
+    margin-top: 340px;
+    border-radius: 10px;
+    width: 615px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input6 {
+    padding-left: 10px;
+    margin-left: 48px;
+    margin-top: 460px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input7 {
+    padding-left: 10px;
+    margin-left: 370px;
+    margin-top: 460px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input8 {
+    padding-left: 10px;
+    margin-left: 48px;
+    margin-top: 530px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input9 {
+    padding-left: 10px;
+    margin-left: 370px;
+    margin-top: 530px;
+    border-radius: 10px;
+    width: 294px;
+    height: 48px;
+    opacity: 80%;
+    position: absolute;
+    display: block;
+    outline: 2px solid #fff;
+
+}
+
+.input-label {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 60px;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+
+}
+
+.input-label2 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 130px;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label3 {
+    position: absolute;
+    margin-top: 200px;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label21 {
+    position: absolute;
+    margin-top: 265px;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+    display: block;
+    
+    
+}
+
+.input-label4 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 200px;
+    margin-left: 380px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label20 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 210px;
+    margin-left: 374px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 22px;
+    color: #8f8e94;
+}
+
+
+.input-label5 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 270px;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label10 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 340px;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label6 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 460px;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label7 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 460px;
+    margin-left: 380px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label8 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 532px;
+    margin-left: 55px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input-label9 {
+    position: absolute;
+    font-family: "Bitter", serif;
+    font-optical-sizing: auto;
+    margin-top: 532px;
+    margin-left: 380px;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+    font-size: 24px;
+    color: #8f8e94;
+}
+
+.input:focus+.input-label,
+.input:valid+.input-label {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+
+}
+
+.input2:focus+.input-label2,
+.input2:valid+.input-label2 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input3:focus+.input-label3,
+.input3:valid+.input-label3 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input21:focus+.input-label21,
+.input21:valid+.input-label21 {
+    transform:
+        translate(10px, -14px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input4:focus+.input-label4,
+.input4:valid+.input-label4 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input20:focus+.input-label20,
+.input20:valid+.input-label20 {
+    transform:
+        translate(0px, -14px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input5:focus+.input-label5,
+.input5:valid+.input-label5 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input10:focus+.input-label10,
+.input10:valid+.input-label10 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+
+}
+
+.input6:focus+.input-label6,
+.input6:valid+.input-label6 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input7:focus+.input-label7,
+.input7:valid+.input-label7 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input8:focus+.input-label8,
+.input8:valid+.input-label8 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input9:focus+.input-label9,
+.input9:valid+.input-label9 {
+    transform:
+        translate(10px, -18px) scale(.8);
+    color: #8f8e94;
+    padding-inline: 5px;
+    background-color: #fff;
+}
+
+.input:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input2:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input3:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input4:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+.input20:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input5:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input6:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input7:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input8:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.input9:is(:focus, :valid) {
+    outline-color: rgba(59, 59, 50, 0.47);
+}
+
+.EnvButton {
+    position: absolute;
+    top: 175%;
+    margin-left: 210px;
+    padding: 10px;
+    padding-inline: 50px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0216C5;
+    border-radius: 22px;
+    justify-content: center;
+    place-items: center;
+    cursor: pointer;
+    transition: box-shadow 1x ease;
+    position: absolute;
+
+
+}
+
+.EnvButton2 {
+    position: absolute;
+    top: 430px;
+    margin-left: -365px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 22px; 
+    cursor: pointer;
+    transition: box-shadow 1x ease;
+    
+
+
+}
+
+.EnvButton:hover {
+    box-shadow: inset 400px 0 0 #0008;
+}
+
+
+
+
+.caixa {
+    background-color: #79C7FF;
+    width: 330px;
+    height: 400px;
+    display: flex;
+    position: absolute;
+    margin-top: -240px;
+    border-top-left-radius: 26px;
+
+
+}
+
+
+
+.caixa2 {
+    background-color: #5DB1EF;
+    width: 280px;
+    height: 200px;
+    display: flex;
+    position: absolute;
+    margin-top: -130px;
+    left: 130px;
+    box-shadow: black;
+
+
+
+
+}
+
+.caixa3 {
+    background-color: #5DB1EF;
+    width: 239px;
+    height: 130px;
+    display: flex;
+    position: absolute;
+    margin-top: -240px;
+    left: 505px;
+    border-top-right-radius: 26px;
+}
+
+.caixa4 {
+    background-color: #321C89;
+    width: 49px;
+    height: 160px;
+    display: flex;
+    position: absolute;
+    margin-top: -100px;
+    left: 695px;
+    border-top-left-radius: 526px;
+}
+
+.caixa5 {
+    background-color: #321C89;
+    width: 3px;
+    height: 310px;
+    display: flex;
+    position: absolute;
+    margin-top: -230px;
+    left: 340px;
+    border-radius: 26px;
+}
+
+.caixa6 {
+
+
+    background-color: #79C7FF;
+    width: 110px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    margin-top: -175px;
+    left: 633px;
+
+
+}
+select{
+    border: 2px solid black;
+    filter: drop-shadow(2px 2px 2px whitesmoke);
+    font-size: 20px;
+}
+
+.Vector {
+    width: 87px;
+    height: 88px;
+    left: 30px;
+    top: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-left: 0px;
+    position: absolute;
+}
+</style>
+<body>
+    <aside class="wrapper">
+        <form id="cadastroForm" method="post" action="/submitcadacs">
+            <div class="caixa"></div>
+            <div class="caixa2"></div>
+            <div class="caixa3"></div>
+            <div class="caixa6"></div>
+            <div class="caixa5"></div>
+            <div class="caixa4"></div>
+            <header>
+                <div>
+                    <a href="index.html">
+                        <img src="./img/voltar.png" alt="botao para voltar" id="btnvoltar">
+                    </a>
+                </div>
+                <span class="titulo">
+                    Área de Cadastro<br>Agente Comunitário
+                </span>
+            </header>
+            <div class="box">
+                <svg class="logo" width="100" height="162" viewBox="0 0 162 162" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="80.5323" cy="80.5323" r="80.5323" fill="#2260FF"/>
+                    <path d="M137.092 74.0842C137.732 68.6944 125.956 34.1343 111.176 27.7948C89.6879 18.5782 78.2213 27.1606 62.4639 38.2574C59.6874 40.2127 100.747 33.4284 105.737 45.5496C129.093 53.1589 137.092 77.2547 137.092 74.0842Z" fill="#9BCCFA"/>
+                    <path d="M115.335 50.3044C115.335 56.4329 110.322 61.4011 104.137 61.4011C97.9524 61.4011 92.9388 56.4329 92.9388 50.3044C92.2989 44.2804 100.298 31.2813 104.137 39.2076C110.322 39.2076 115.335 44.1758 115.335 50.3044Z" fill="#9BCCFA"/>
+                    <path d="M23.7056 86.4683C23.0657 91.8581 34.8411 126.418 49.6213 132.758C71.1093 141.974 82.5759 133.392 98.3334 122.295C101.11 120.34 60.0499 127.124 55.0604 115.003C31.7043 107.394 23.7056 83.2978 23.7056 86.4683Z" fill="#9CCCFA"/>
+                    <path d="M45.462 110.247C45.462 104.119 50.4756 99.1504 56.6601 99.1504C62.8447 99.1504 67.8583 104.119 67.8583 110.247C68.4982 116.271 60.4995 129.27 56.6601 121.344C50.4756 121.344 45.462 116.376 45.462 110.247Z" fill="#9CCCFA"/>
+                    <path d="M86.32 137.415C91.7591 138.049 126.635 126.38 133.032 111.734C142.333 90.4403 133.672 79.0775 122.474 63.4627C120.501 60.7114 127.347 101.4 115.115 106.344C107.437 129.489 83.1205 137.415 86.32 137.415Z" fill="white"/>
+                    <path d="M110.316 115.855C104.131 115.855 99.1177 110.887 99.1177 104.759C99.1177 98.6301 104.131 93.6619 110.316 93.6619C116.395 93.0278 129.513 100.954 121.514 104.759C121.514 110.887 116.5 115.855 110.316 115.855Z" fill="white"/>
+                    <path d="M75.1011 25.0544C69.6621 24.4203 34.7863 36.0891 28.3888 50.7355C19.088 72.0289 27.7489 83.3917 38.947 99.0065C40.9201 101.758 34.0739 61.0696 46.3059 56.1253C53.9846 32.9806 78.3006 25.0544 75.1011 25.0544Z" fill="white"/>
+                    <path d="M51.1051 46.6138C57.2897 46.6138 62.3033 51.582 62.3033 57.7106C62.3033 63.8392 57.2897 68.8074 51.1051 68.8074C45.0261 69.4415 31.9083 61.5152 39.907 57.7106C39.907 51.582 44.9206 46.6138 51.1051 46.6138Z" fill="white"/>
+                </svg>
+            </div>
+            <div class="logo2">
+                <span>SobreVidas</span><br>
+                <span style="color: #767676; font-size: 35px; font-family: Arial, Helvetica, sans-serif; font-weight: 700; word-wrap: break-word">
+                    Câncer de Boca
+                </span>
+            </div>
+            <header>
+                <h1 class="form">Formulário para preenchimento</h1>
+            </header>
+            <div class="input-group">
+                <div>
+                    <input type="text" id="nome" name="nome" required class="input">
+                    <label for="nome" class="input-label">Nome Completo</label>
+                </div>
+                <div>
+                    <input type="text" id="nomemae" name="nomemae" required class="input2">
+                    <label for="nomemae" class="input-label2">Nome Completo da Mãe</label>
+                </div>
+                <div>
+                    <input type="text" id="cpf" name="cpf" required class="input3" maxlength="14">
+                    <label for="cpf" class="input-label3">CPF</label>
+                    <script>
+                       $("#cpf").inputmask("999.999.999-99");
+ 
+                    </script>
+                </div>
+                <div>
+                    <select id="genero" name="genero" required class="input21" style="width: 309px; height: 53px; box-sizing: border-box; display: block;">
+                        <option value="Não Informado">Prefiro não informar</option>
+                        <option value="Mulher Cis">Mulher Cis</option>
+                        <option value="Homem Cis">Homem Cis</option>
+                        <option value="Mulher Trans">Mulher Trans</option>
+                        <option value="Homem Trans">Homem Trans</option>
+                        <option value="Não-Binário">Não-Binário</option>
+                        <option value="Gênero Neutro">Gênero Neutro</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                    <label for="genero" class="input-label21">Gênero</label>
+                </div>
+                <div>
+                    <input type="text" id="telefone" name="telefone" required class="input4" maxlength="15">
+                    <label for="telefone" class="input-label4">Telefone</label>
+                    <script>
+                        $("#telefone").inputmask("(99) 99999-9999");
+  
+                     </script> 
+                </div>
+                <br><br><br>
+                <div>
+                    <input type="text" id="nascimento" name="nascimento" required class="input20">
+                    <label for="nascimento" class="input-label20">Data De Nascimento</label>
+                    <script>
+                        $("#nascimento").inputmask("99/99/9999");
+  
+                     </script>    
+                
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" required class="input5">
+                    <label for="email" class="input-label5">Email</label>
+                </div>
+                <div>
+                    <input type="password" id="senha" name="senha" required class="input10">
+                    <label for="senha" class="input-label10">Senha</label>
+                    <i class="bi bi-eye-fill" id="btn-senha" onclick="mostarsenha()" style="position: relative; top: 355px; font-size: 22px; left: 640px; cursor: pointer; z-index: 3;"></i>
+                </div>
+                <header>
+                    <h1 class="form2">Dados Profissionais</h1>
+                </header>
+                <section id="dds">
+                    <div>
+                        <input type="number" id="INE" name="ine" required class="input6">
+                        <label for="INE" class="input-label6">INE</label>
+                    </div>
+                    <div>
+                        <input type="number" id="CNES" name="cnes" required class="input7">
+                        <label for="CNES" class="input-label7">CNES</label>
+                    </div>
+                    <div>
+                        <input type="number" id="CBO" name="cbo" required class="input8">
+                        <label for="CBO" class="input-label8">CBO</label>
+                    </div>
+                    <div>
+                        <input type="number" id="CNS" name="cns" required class="input9">
+                        <label for="CNS" class="input-label9">CNS</label>
+                    </div>
+                </section>
+            </div>
+            <button type="submit" >
+                <div class="EnvButton">
+                    Enviar Formulário
+                </div>
+            </button>
+        </form>
+    </aside>
+    <script>
+        
+        function mostarsenha() {
+            const senhaInput = document.getElementById('senha');
+            const senhaIcon = document.getElementById('btn-senha');
+            if (senhaInput.type === 'password') {
+                senhaInput.type = 'text';
+                senhaIcon.classList.remove('bi-eye-fill');
+                senhaIcon.classList.add('bi-eye-slash-fill');
+            } else {
+                senhaInput.type = 'password';
+                senhaIcon.classList.remove('bi-eye-slash-fill');
+                senhaIcon.classList.add('bi-eye-fill');
+            }
+        }
+    </script>
+</body>
+</html>

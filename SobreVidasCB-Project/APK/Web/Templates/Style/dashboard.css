@@ -1,0 +1,58 @@
+body{
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+corpo{
+  background-color: #9BCCFA;
+  display: grid;
+  width: 704px;
+  padding: 20px;
+  border-radius: 25px;
+}
+header{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 20px;
+}
+#voltar{
+  filter: drop-shadow(6px 6px 6px gray);
+}
+#voltar:hover{
+  transform: translateY(-3px);
+}
+
+#btnfiltro{
+  background-color:#0216C5 ;
+  width: 261px;
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  color: white;
+  font-size: 22px;
+  border: none;
+
+}
+#btnfiltro:hover{
+  background-color: blue;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+aside{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.content{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+}

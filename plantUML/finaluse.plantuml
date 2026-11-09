@@ -1,0 +1,43 @@
+@startuml UC_proposta
+skinparam linetype ortho
+
+
+
+actor Funcionario as Func
+actor Responsavel_Acesso as PA
+actor Visitante as Vis
+database Registro_da_empresa as Db
+
+
+
+component Software <<Ru=4378362>>{
+    (Reconhecimento por voz) as RVoz
+    (Reconhecimento por vídeo) as RVi
+    (Controlar ar-condicionado) as CtrlAR
+    (Controlar luz) as CtrlLuz
+    (Controlar acesso) as CtrlAcess
+    (Autenticar voz ou video) as ATH
+    (Envia mensagem) as Message
+    actor IA as IA 
+
+}
+
+Software .u.> Db
+Vis -r- RVoz
+Vis -r- RVi
+Func -r- RVoz
+Func -r- RVi
+PA -r- RVoz
+PA -r- RVi
+
+RVi --> ATH
+RVoz --> ATH
+
+ATH ..>IA
+IA ..> Db
+ATH --> CtrlAcess
+ATH --> CtrlAR
+ATH --> CtrlLuz
+ATH --> Message
+
+@enduml

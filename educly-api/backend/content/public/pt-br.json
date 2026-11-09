@@ -1,0 +1,11 @@
+{
+  "plan": "public",
+  "language": "pt-br",
+  "days": [
+    {
+      "id": 1,
+      "title": "Conteudo Publico Inicial",
+      "content": "Conteudo de entrada para visitantes sem assinatura."
+    }
+  ]
+}

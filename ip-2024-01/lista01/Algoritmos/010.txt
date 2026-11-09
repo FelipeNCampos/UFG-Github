@@ -1,0 +1,12 @@
+var
+    int a,b,c,d;
+
+inicio
+    leia linha grave em a
+    leia linha grave em b
+    leia linha grave em c
+    leia linha grave em d
+    escreva "O VALOR DO DETERMINANTE E ="+(a*d)-(b*c)
+
+
+fim

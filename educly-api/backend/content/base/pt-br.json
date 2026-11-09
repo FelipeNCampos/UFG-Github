@@ -1,0 +1,21 @@
+{
+  "plan": "base",
+  "language": "pt-br",
+  "days": [
+    {
+      "id": 1,
+      "title": "Dia 1 - Fundamentos",
+      "content": "Introducao ao plano Base: objetivos, rotina e checklist inicial."
+    },
+    {
+      "id": 2,
+      "title": "Dia 2 - Estrutura",
+      "content": "Organize seu ambiente e aplique a sequencia de estudo recomendada."
+    },
+    {
+      "id": 3,
+      "title": "Dia 3 - Execucao",
+      "content": "Pratica guiada com foco em consistencia e revisao dos resultados."
+    }
+  ]
+}

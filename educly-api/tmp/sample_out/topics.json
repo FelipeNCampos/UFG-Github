@@ -1,0 +1,61 @@
+[
+  {
+    "day_id": 1,
+    "order": 1,
+    "behavior": "explicacao",
+    "activity_type": null,
+    "payload": {
+      "title": "T1",
+      "content": "C1"
+    }
+  },
+  {
+    "day_id": 1,
+    "order": 2,
+    "behavior": "atividade",
+    "activity_type": "Quizz",
+    "payload": {
+      "title": "Q1",
+      "question": "Perg?",
+      "options": [
+        {
+          "text": "a",
+          "is_correct": true,
+          "explanation": "ok"
+        }
+      ]
+    }
+  },
+  {
+    "day_id": 1,
+    "order": 3,
+    "behavior": "atividade",
+    "activity_type": "MatchWords",
+    "payload": {
+      "title": "M1",
+      "description": "D1",
+      "pairs": [
+        {
+          "text": "L",
+          "match": "R"
+        }
+      ]
+    }
+  },
+  {
+    "day_id": 1,
+    "order": 4,
+    "behavior": "atividade",
+    "activity_type": "FillBlanks",
+    "payload": {
+      "title": "P1",
+      "sentence": "Ordene",
+      "answer": "a | b",
+      "options": [
+        "b",
+        "a"
+      ],
+      "explanation": "exp"
+    }
+  }
+]

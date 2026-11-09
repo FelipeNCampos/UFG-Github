@@ -1,0 +1,10 @@
+var:
+    int temp,renda,linhat;
+inicio
+    leia linha e guarde em temp
+    para c de 1 ate temp de 1 em 1 faca:
+        leia linha guarde em linhat
+        faça lista com linha separando pelo " " e guarde em linha
+        renda = linhat[0]*linhat[1]/100 + (linhat[0]*linhat[2]/100)*5 + (linhat[0]*linhat[3]/100)*10 + (linha[0]*linha[4]/100)*20
+        escreva "A RENDA DO JOGO N. "+c+"="+renda
+fim

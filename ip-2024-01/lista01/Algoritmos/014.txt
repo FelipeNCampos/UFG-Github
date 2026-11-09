@@ -1,0 +1,8 @@
+var
+    float h,a;
+
+inicio
+    leia linha guarde em h
+    leia linha guarde em a
+    escreva "O VOLUME DA PIRAMIDE E = "+ (((3*(a*a)*1,7)/2)*h)/3+"METROS CUBICOS"
+fim

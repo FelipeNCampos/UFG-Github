@@ -1,0 +1,160 @@
+{% extends 'base_home.html' %}
+{% load form_tags %}
+
+{% block title %}
+	{% if book %}Editar Anúncio{% else %}Criar Anúncio{% endif %}
+{% endblock %}
+
+{% block home_content %}
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<h2 class="text-center mb-4">{% if book %}Editar Anúncio{% else %}Criar Anúncio{% endif %}</h2>
+
+				<form method="POST" enctype="multipart/form-data" class="shadow-sm p-4 rounded bg-white">
+					{% csrf_token %}
+
+					{% if form.non_field_errors %}
+						<div class="alert alert-danger">
+							{{ form.non_field_errors }}
+						</div>
+					{% endif %}
+
+					<div class="mb-3">
+						{{ form.title.label_tag }}
+						{{ form.title|add_class:"form-control" }}
+						{% if form.title.errors %}
+							<div class="text-danger small">{{ form.title.errors }}</div>
+						{% endif %}
+					</div>
+
+					<div class="mb-3">
+						{{ form.author.label_tag }}
+						{{ form.author|add_class:"form-control" }}
+						{% if form.author.errors %}
+							<div class="text-danger small">{{ form.author.errors }}</div>
+						{% endif %}
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							{{ form.edition.label_tag }}
+							{{ form.edition|add_class:"form-control" }}
+							{% if form.edition.errors %}
+								<div class="text-danger small">{{ form.edition.errors }}</div>
+							{% endif %}
+						</div>
+						<div class="col-md-6 mb-3">
+							{{ form.year.label_tag }}
+							{{ form.year|add_class:"form-control" }}
+							{% if form.year.errors %}
+								<div class="text-danger small">{{ form.year.errors }}</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-6 mb-3">
+							{{ form.pages.label_tag }}
+							{{ form.pages|add_class:"form-control" }}
+							{% if form.pages.errors %}
+								<div class="text-danger small">{{ form.pages.errors }}</div>
+							{% endif %}
+						</div>
+						<div class="col-md-6 mb-3">
+							{{ form.publisher.label_tag }}
+							{{ form.publisher|add_class:"form-control" }}
+							{% if form.publisher.errors %}
+								<div class="text-danger small">{{ form.publisher.errors }}</div>
+							{% endif %}
+						</div>
+					</div>
+					<div class="mb-4">
+						<label for="images" class="form-label">
+							{% if book %}
+								Adicionar
+							{% endif %}
+							Fotos
+						</label>
+						<input type="file" accept="image/*" name="images" id="images" class="form-control" multiple>
+					</div>
+					<div class="d-grid gap-2">
+						<button type="submit" class="btn btn-primary btn-lg">
+							{% if book %}Atualizar{% else %}Salvar{% endif %}
+						</button>
+						{% if book %}
+							<a class="btn btn-danger btn-lg delete-book">Apagar</a>
+						{% endif %}
+					</div>
+				</form>
+
+				{% if book and images %}
+					<div class="mt-4">
+						<h4>Imagens do Livro</h4>
+						<div class="row">
+							{% for image in images %}
+								<div class="col-md-4 mb-3">
+									<img src="{{ image.image.url }}" class="img-thumbnail mb-2" alt="Imagem do livro">
+									<form method="POST" action="{% url 'delete_image' image.id %}">
+										{% csrf_token %}
+										<button type="submit" class="btn btn-sm btn-danger">Excluir</button>
+									</form>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="deleteBookModal" tabindex="-1" aria-labelledby="deleteBookModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="deleteBookModalLabel">Confirmar Exclusão</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Tem certeza de que deseja excluir este livro?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary mr-2" data-bs-dismiss="modal" aria-label="Close">Cancelar
+					</button>
+					<button type="button" class="btn btn-danger" data-id="{{ book.id }}" id="confirmDeleteBook">Apagar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	{% if book %}
+		<script>
+        const modal = new bootstrap.Modal(document.getElementById('deleteBookModal'));
+
+        document.querySelectorAll('.delete-book').forEach(button => {
+            button.addEventListener('click', function () {
+                modal.show();
+            });
+        });
+
+        document.getElementById('confirmDeleteBook').addEventListener('click', function () {
+            const deleteUrl = `{% url 'delete_book' book.id %}`;
+            fetch(deleteUrl, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        alert('Erro ao excluir o livro.');
+                    }
+                });
+        });
+		</script>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+@startuml dashview
+
+class Client {
+    + Nome: String
+    + Contato: String
+    + Plataforma: String
+    + Contratações: int
+    + Valor_Total: int
+    + Tempo_Ultimo_Contrato: Date
+    + Comentarios: String
+}
+
+class History{
+    + Plataforma: String
+    + Tipo_Serviço: String
+    + Detalhes_Serviço: String
+    + Contratante: String
+    + Contato: String
+    + Data_Inicio: Date
+    + Data_Fim: Date
+    + Valor: int
+    + Stats: String
+}
+
+@enduml

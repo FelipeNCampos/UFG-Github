@@ -1,0 +1,13 @@
+var
+    int temp;
+    string resultado;
+
+inicio
+    para c de 1 ate 3 de 1 em 1 faca:
+        leia linha guarde em temp
+        se length(temp)>1:
+            escreva"DIGITO INVALIDO"
+            return 
+        resultado = resultado + str(temp)
+        escreva resultado , int(resultado)*int(resultado)
+fim

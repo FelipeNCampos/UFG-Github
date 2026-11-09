@@ -1,0 +1,116 @@
+{
+  "creation_date": 1771681128832,
+  "data": {
+    "affiliates": [
+      {
+        "affiliate_code": "",
+        "name": ""
+      }
+    ],
+    "buyer": {
+      "address": {
+        "address": "",
+        "city": "",
+        "complement": "",
+        "country": "Chile",
+        "country_iso": "CL",
+        "zipcode": ""
+      },
+      "document": "",
+      "document_type": "",
+      "email": "eduardo.castro@invser.cl",
+      "first_name": "Eduardo",
+      "last_name": "Moroso",
+      "name": "Eduardo Alberto Castro Moroso"
+    },
+    "commissions": [
+      {
+        "currency_value": "USD",
+        "source": "MARKETPLACE",
+        "value": 0.58
+      },
+      {
+        "currency_conversion": {
+          "conversion_rate": 5.174804,
+          "converted_to_currency": "BRL",
+          "converted_value": 35.81
+        },
+        "currency_value": "USD",
+        "source": "PRODUCER",
+        "value": 6.92
+      }
+    ],
+    "producer": {
+      "document": "30781259000188",
+      "legal_nature": "Pessoa Jurídica",
+      "name": "NEON ENTERPRISE PROMOCAO DE VENDAS LTDA"
+    },
+    "product": {
+      "has_co_production": false,
+      "id": 7018201,
+      "is_physical_product": false,
+      "name": "Educly",
+      "support_email": "contact@educly.app",
+      "ucode": "00f5d213-141a-4fbe-b4a7-ce9cc52088fe",
+      "warranty_date": "2026-03-08T00:00:00Z"
+    },
+    "purchase": {
+      "approved_date": 1771681115000,
+      "business_model": "A",
+      "checkout_country": {
+        "iso": "CL",
+        "name": "Chile"
+      },
+      "date_next_charge": 1774094400000,
+      "full_price": {
+        "currency_value": "CLP",
+        "value": 8163
+      },
+      "invoice_by": "HOTMART",
+      "is_funnel": true,
+      "offer": {
+        "code": "7n1vboj5",
+        "coupon_code": "OFF50",
+        "description": "50% de descuento",
+        "name": "OFF50"
+      },
+      "order_bump": {
+        "is_order_bump": false
+      },
+      "order_date": 1771681110000,
+      "origin": {
+        "sck": "fbhQwK21wXxR120238500410010393hQwK21wXxRpaidhQwK21wXxR120238500410040393hQwK21wXxR120238500410000393",
+        "xcod": "fbhQwK21wXxR120238500410010393hQwK21wXxRpaidhQwK21wXxR120238500410040393hQwK21wXxR120238500410000393"
+      },
+      "original_offer_price": {
+        "currency_value": "USD",
+        "value": 7.91
+      },
+      "payment": {
+        "installments_number": 1,
+        "type": "CREDIT_CARD"
+      },
+      "price": {
+        "currency_value": "CLP",
+        "value": 6859.66
+      },
+      "recurrence_number": 1,
+      "status": "APPROVED",
+      "subscription_anticipation_purchase": false,
+      "transaction": "HP0467523654"
+    },
+    "subscription": {
+      "plan": {
+        "id": 1251237,
+        "name": "Acesso mensual - ESP"
+      },
+      "status": "ACTIVE",
+      "subscriber": {
+        "code": "8D3ZMO4A"
+      }
+    }
+  },
+  "event": "PURCHASE_APPROVED",
+  "id": "eca202a5-7687-443e-a499-82833863dca8",
+  "version": "2.0.0"
+}

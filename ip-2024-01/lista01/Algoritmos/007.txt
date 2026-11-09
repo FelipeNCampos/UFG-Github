@@ -1,0 +1,10 @@
+var
+    flaot temp;
+
+
+inicio
+    leia linha guarde em temp
+    escreva "O VALOR EM CELSIUS = "+(5*temp-160)/9
+    leia linha guarde em temp
+    escreva "A QUANTIDADE DE CHUVA E = "+temp*25.5
+fim

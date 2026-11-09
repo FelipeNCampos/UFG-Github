@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+
+jobs:
+  test:
+    name: Test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.x"
+          cache-dependency-path: |
+            assinador-cli/go.sum
+            simulador-cli/go.sum
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Test assinador-cli
+        shell: pwsh
+        working-directory: assinador-cli
+        run: go test ./...
+
+      - name: Test simulador-cli
+        shell: pwsh
+        working-directory: simulador-cli
+        run: go test ./...
+
+      - name: Test assinador-verificador
+        shell: pwsh
+        working-directory: assinador-verificador
+        run: ./test.ps1
+
+      - name: Build release artifacts
+        shell: pwsh
+        run: ./scripts/build-release.ps1 -Version "ci"

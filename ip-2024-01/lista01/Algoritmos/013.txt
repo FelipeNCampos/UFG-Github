@@ -1,0 +1,18 @@
+var
+    float temp;
+
+
+
+inicio
+    leia linha guarde em temp;
+    se temp>=9:
+        escreva "NOTA = "+temp+"CONCEITO = A"
+    senao:
+        se temp>=7.5:
+            escreva "NOTA = "+temp+"CONCEITO = B"
+        senao:
+            se temp>=6:
+                escreva "NOTA = "+temp+"CONCEITO = C"
+            senao:
+                escreva "NOTA = "+temp+"CONCEITO = D"
+fim

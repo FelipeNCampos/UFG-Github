@@ -1,0 +1,11 @@
+{
+  "plan": "hub",
+  "language": "pt-br",
+  "days": [
+    {
+      "id": 1,
+      "title": "Dia 1 - Hub IA Inicio",
+      "content": "Introducao ao hub com base em automacoes e produtividade aplicada."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "day1": {
+    "steps": [
+      {"type":"text","title":"T1","content":"C1"},
+      {"type":"quiz","title":"Q1","question":"Perg?","options":[{"text":"a","isCorrect":true,"explanation":"ok"}]},
+      {"type":"component","componentName":"MatchWords","props":{"title":"M1","description":"D1","pairs":[{"left":"L","right":"R"}]}},
+      {"type":"practical","title":"P1","question":"Ordene","initialWords":["b","a"],"correctOrder":["a","b"],"explanation":"exp"}
+    ]
+  }
+}

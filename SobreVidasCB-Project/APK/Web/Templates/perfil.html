@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Img/logo.png">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="/Style/perfil.css">
+</head>
+<body>
+    <corpo>
+        <header>
+            <a onclick="redirectToHomePage()">
+                <img src="/Img/voltar.png" id="btnvoltar" alt="botao para voltar">
+                <script>
+                    function redirectToHomePage() {
+                        window.location.href = "/home"; // Redireciona para a rota /login
+                    }
+                </script>
+            </a>
+            <h1 style="position: relative;left: -20px;">Perfil do usuário</h1>
+        </header>
+        <aside>
+            <div id="foto">
+                <img src="/Img/perfil.png" alt="foto de perfil">
+            </div>
+            <h2>Informações</h2>
+            <h3 id="nome"><subinf>Nome Completo</subinf><br>{{ .Nome }}</h3>
+            <h3 id="mae"><subinf>Nome Completo da Mâe</subinf><br>{{ .Mae }}</h3>
+            <div id="cpftel">
+                <h4 id="cpf"><subinf>CPF</subinf><br>{{ .CPF }}</h4>
+                <h4 id="tel"><subinf>Telefone</subinf><br>{{ .Telefone }}</h4>
+            </div>
+            <h3 id="email"><subinf>Email</subinf><br>{{ .Email }}</h3>
+            <div id="cpftel">
+                <h4 id="cpf"><subinf>Idade</subinf><br>{{ .Idade }}</h4>
+                <h4 id="tel"><subinf>Gênero</subinf><br>{{ .Gen }}</h4>
+            </div>
+
+            <h2 id="ddsprof">Dados Profissionais</h2>
+            <div id="inecnes">
+                <h4 id="ime"><subinf>INE</subinf><br>{{ .INE }}</h4>
+                <h4 id="cnes"><subinf>CNES</subinf><br>{{ .CNES }}</h4>
+            </div>
+            <div id="cbocns">
+                <h4 id="cbo"><subinf>CBO</subinf><br>{{ .CBO }}</h4>
+                <h4 id="cns"><subinfo>CNS</subinfo><br>{{ .CNS }}</h4>
+            </div>
+            <div id="containerstatus">
+                <h2 style="position: relative;left: -20px;">Status</h2>
+                <h4 id="status" >Ativo</h4>
+            </div>
+
+        </aside>
+    </corpo>
+</body>
+</html>

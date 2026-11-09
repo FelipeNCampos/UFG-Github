@@ -1,0 +1,496 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_back_ios,arrow_forward_ios" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            .material-symbols-outlined {
+                  font-variation-settings:
+                  'FILL' 0,
+                  'wght' 400,
+                  'GRAD' 0,
+                  'opsz' 24
+            }
+            body {
+                background-color: #E0F7FF; /* Cor de fundo suave */
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+            }
+            canvas {
+                width: 100% !important;
+                height: 100% !important;
+            }
+            .chart-container {
+                position: relative;
+                width: 100%;
+                height: 100%; /* Garante que o gráfico ocupe todo o espaço disponível */
+            }
+
+            .head {
+                background-color: #00538c; /* Azul #00538c */
+                height: 110px;
+                display: flex;
+                flex-direction: row;
+                gap: 250px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+
+            }
+            .title {
+                font-family: "Josefin Slab";
+                font-size: 50px;
+                color: white;
+                
+            }
+            .top {
+                background-color: #E0F7FF; /* Fundo claro azul */
+                height: 70px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                gap: 16px;
+                
+            }
+            .minicard {
+                background-color: #00538c; /* Azul #00538c */
+                height: 70px;
+                width: 100%;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 5px;
+                font-size: 15px;
+                font-family: "Josefin Sans";
+                color: white;
+                gap: 20px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+            }
+            button {
+                width: 110px;
+                height: 25px;
+                border-radius: 15px;
+                border: none;
+                background-color: #00538c; /* Azul #00538c */
+                color: white;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+
+            }
+            button:hover {
+                background-color: #003C6C; /* Azul mais escuro */
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+                transform: scale(1.05);
+
+            }
+            .bttnrow {
+                display: flex;
+                flex-direction: row;
+                gap: 85px;
+                justify-content: center;
+            }
+            .cardbody {
+                background-color: #E0F7FF;
+                height: 820px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .cardrow {
+                display: flex;
+                flex-direction: row;
+                gap: 17px;
+            }
+            .lcard, .rcard {
+                background-color: #00538c; /* Azul #00538c */
+                color: white;
+                height: 300px;
+                width: 100%;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 5px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+
+            }
+
+            .filter{
+                height: 100px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .yearfilter {
+                font-family: "Josefin Sans";
+                font-size: 20px;
+                color: #00538c; /* Azul #00538c */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <div>
+                <img src="https://drive.google.com/uc?export=view&id=1JmPUu6SGI_hK65_yJ6nGoAmIKbmZ6hnA" alt="Logo">
+            </div>
+            <div class="title">Meu planner financeiro</div>
+        </div>
+        <div class="top">
+            <div class="minicard">
+                <div>Entrada no mês</div>
+                <div class="entradavalue">xx</div>
+            </div>
+
+            <div class="minicard">
+                <div>Saída no mês</div>
+                <div class="saidavalue">xx</div>
+            </div>
+
+            <div class="minicard">
+                <div>Saldo no mês</div>
+                <div class="saldovalue">xx</div>
+            </div>
+
+            <div class="minicard">
+                <div>Saldo atual</div>
+                <div class="atualvalue">xx</div>
+            </div>
+
+            <div class="minicard">
+                <div>Receita bruta mês</div>
+                <div class="receitavalue">xx</div>
+            </div>
+
+            <div class="minicard">
+                <div>Ganhos no mês</div>
+                <div class="ganhovalue">xx</div>
+            </div>
+
+            <div class="minicard">
+                <div>Resultados no mês</div>
+                <div class="resultadovalue">xx</div>
+            </div>
+        </div>
+        <div class="filter">
+            <div class="bttnrow">
+                <button class="bttnback">
+                    <span class="material-symbols-outlined">
+                        arrow_back_ios
+                    </span>
+                </button>
+                <div class="yearfilter">2024</div>
+                <button class="bttnnext">
+                    <span class="material-symbols-outlined">
+                        arrow_forward_ios
+                    </span>
+                </button>
+            </div>
+            <div class="bttnrow">
+              <button onclick="createDesempenhoChart(0)">Janeiro</button>
+              <button onclick="createDesempenhoChart(1)">Fevereiro</button>
+              <button onclick="createDesempenhoChart(2)">Março</button>
+              <button onclick="createDesempenhoChart(3)">Abril</button>
+              <button onclick="createDesempenhoChart(4)">Maio</button>
+              <button onclick="createDesempenhoChart(5)">Junho</button>
+            </div>
+            <div class="bttnrow">
+              <button onclick="createDesempenhoChart(6)">Julho</button>
+              <button onclick="createDesempenhoChart(7)">Agosto</button>
+              <button onclick="createDesempenhoChart(8)">Setembro</button>
+              <button onclick="createDesempenhoChart(9)">Outubro</button>
+              <button onclick="createDesempenhoChart(10)">Novembro</button>
+              <button onclick="createDesempenhoChart(11)">Dezembro</button>
+            </div>
+        </div>
+        <div class="cardbody">
+            <div class="cardrow">
+                <div class="lcard">
+                    <div class="chart-container">
+                        <canvas class="fluxograf"></canvas>
+                    </div>
+                </div>
+                <div class="rcard">
+                  <canvas id="barraex"></canvas>
+                </div>
+            </div>
+            <div class="cardrow">
+                <div class="lcard">
+                    <canvas class="saldograf"></canvas>
+                </div>
+                <div class="rcard">
+                    <canvas id="linhaex"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="orc"></div>
+
+        <script>
+    // Selecionar os contextos dos gráficos
+    const ctx = document.querySelector('.fluxograf').getContext('2d');
+    const saldoGrafCtx = document.querySelector('.saldograf').getContext('2d');
+    const exgrafctx = document.getElementById('barraex').getContext('2d');
+    const linhaexctx = document.getElementById('linhaex').getContext('2d');
+
+    // Dados do gráfico (Despesas, Rendimentos e Saldo Mensal)
+    const despesas = [-500, -300, -400, -250, -600, -700, -450, -500, -300, -400, -600, -350];
+    const rendimentos = [800, 600, 700, 900, 500, 650, 800, 700, 600, 750, 900, 850];
+    const saldoMensal = rendimentos.map((rendimento, index) => rendimento + despesas[index]);
+
+    // Labels para os meses
+    const labels = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+
+    // Dados de receitas
+    const receitas = {
+        bruta: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+        liquida: [80, 85, 90, 88, 87, 86, 84, 83, 82, 81, 80, 78],
+        bruto: [60, 65, 68, 70, 72, 71, 69, 68, 67, 66, 65, 63],
+        operacionalAntes: [50, 55, 58, 60, 62, 61, 59, 58, 57, 56, 55, 53],
+        operacional: [40, 45, 48, 50, 52, 51, 49, 48, 47, 46, 45, 43],
+        liquido: [30, 35, 38, 40, 42, 41, 39, 38, 37, 36, 35, 33]
+    };
+
+    // Função para criar o gráfico de fluxo de caixa
+    function createFluxoDeCaixaChart() {
+        const data = {
+            labels,
+            datasets: [
+                { label: 'Despesas', data: despesas, backgroundColor: 'rgba(255, 99, 132, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 },
+                { label: 'Rendimentos', data: rendimentos, backgroundColor: 'rgba(0, 128, 0, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 },
+                { label: 'Saldo Mensal', data: saldoMensal, type: 'line', fill: false, borderColor: 'rgba(0, 0, 0, 1)', tension: 0.3, borderWidth: 2, pointBackgroundColor: 'rgba(0, 0, 0, 1)' }
+            ]
+        };
+
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { labels: { color: 'white', font: { size: 15, family: "Josefin Sans" } } },
+                    title: { display: true, text: 'Fluxo de caixa', color: 'white', font: { size: 15, family: "Josefin Sans" } },
+                    tooltip: { enabled: true, backgroundColor: 'rgba(0, 0, 0, 0.7)', titleColor: 'white', bodyColor: 'white', footerColor: 'white', callbacks: { label: tooltipItem => `Valor: ${tooltipItem.raw}` } }
+                },
+                scales: {
+                    x: { stacked: true, ticks: { color: 'white' } },
+                    y: { stacked: true, beginAtZero: true, ticks: { color: 'white' } }
+                }
+            }
+        };
+        new Chart(ctx, config);
+    }
+
+    // Função para criar o gráfico de desempenho por mês
+    let chartInstance = null;  // Variável para armazenar a instância do gráfico
+
+    // Função para criar o gráfico de desempenho por mês
+    function createDesempenhoChart(monthIndex) {
+        // Destruir o gráfico anterior, se existir
+        if (chartInstance) {
+            chartInstance.destroy();
+        }
+
+        // Dados de receitas
+        const receitas = {
+            bruta: [100, 100, 100, 100, 100, 100, 100, 100, 100, 100,57255, 100],
+            liquida: [80, 85, 90, 88, 87, 86, 84, 83, 82, 81, 80, 78],
+            bruto: [60, 65, 68, 70, 72, 71, 69, 68, 67, 66,   48414, 63],
+            operacionalAntes: [50, 55, 58, 60, 62, 61, 59, 58, 57, 56,   10183, 53],
+            operacional: [40, 45, 48, 50, 52, 51, 49, 48, 47, 46,   9581, 43],
+            liquido: [30, 35, 38, 40, 42, 41, 39, 38, 37, 36,   9581, 33]
+        };
+
+        const totalReceita = receitas.bruta[monthIndex];
+        const porcentagens = Object.fromEntries(Object.keys(receitas).map(key => [key, (receitas[key][monthIndex] / totalReceita) * 100]));
+
+        const data = {
+            labels: ['Receitas'],
+            datasets: [
+                { label: 'Receita Bruta', data: [receitas.bruta[monthIndex]], backgroundColor: 'rgba(0, 128, 0, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 },
+                { label: 'Receita Líquida', data: [receitas.liquida[monthIndex]], backgroundColor: 'rgba(0, 0, 255, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 },
+                { label: 'Resultado Bruto', data: [receitas.bruto[monthIndex]], backgroundColor: 'rgba(255, 165, 0, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 },
+                { label: 'Resultado Operacional Antes do Financeiro', data: [receitas.operacionalAntes[monthIndex]], backgroundColor: 'rgba(255, 99, 132, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 },
+                { label: 'Resultado Operacional', data: [receitas.operacional[monthIndex]], backgroundColor: 'rgba(75, 0, 130, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 },
+                { label: 'Resultado Líquido do Exercício', data: [receitas.liquido[monthIndex]], backgroundColor: 'rgba(139, 69, 19, 0.7)', borderColor: 'rgba(0, 0, 0, 1)', borderWidth: 1 }
+            ]
+        };
+
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                responsive: true,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { labels: { color: 'white' } },
+                    title: { display: true, text: `Resultado do exercício de ${['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'][monthIndex]}`, color: 'white', font: { size: 18, family: "Josefin Slab" } },
+                    datalabels: {
+                        color: 'white',
+                        align: 'end',
+                        formatter: (value, context) => {
+                            const label = context.chart.data.datasets[context.datasetIndex].label;
+                            const percent = porcentagens[label.toLowerCase().replace(' ', '')];
+                            return `${percent.toFixed(1)}%`;
+                        }
+                    }
+                },
+                scales: {
+                    x: { ticks: { color: 'white', font: { family: "Josefin Sans", size: 14 } } },
+                    y: { display: false }
+                }
+            }
+        };
+
+        // Criar o gráfico com o novo mês
+        chartInstance = new Chart(exgrafctx, config);
+    }
+
+    // Adicionar os event listeners aos botões para atualizar o gráfico
+    document.querySelectorAll(".bttnrow button").forEach((button, index) => {
+        button.addEventListener("click", function() {
+            createDesempenhoChart(index-2);  // Corrigir a passagem do índice para o mês correto
+        });
+    });
+
+
+    // Função para criar gráfico de evolução de lucros
+    function createLucrosChart() {
+        const lucroMensal = [300, 400, 500, 450, 350, 250, 300, 400, 500, 450, 600, 700];
+        const config = {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Evolução dos Lucros',
+                    data: lucroMensal,
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    backgroundColor: 'rgba(0, 255, 0, 0.5)',
+                    fill: true,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(0, 255, 0, 1)',
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { labels: { color: 'white', font: { size: 15, family: "Josefin Sans" } } },
+                    title: { display: true, text: 'Saldo acumulado', color: 'white', font: { size: 18, family: "Josefin Slab" } },
+                    tooltip: { backgroundColor: 'rgba(0, 0, 0, 0.7)', titleColor: 'white', bodyColor: 'white' }
+                },
+                scales: {
+                    x: { ticks: { color: 'white', font: { family: "Josefin Sans" } } },
+                    y: { ticks: { color: 'white', font: { family: "Josefin Sans" }, beginAtZero: true } }
+                }
+            }
+        };
+        new Chart(saldoGrafCtx, config);
+    }
+
+    function createExerciciochart() {
+        const despesaMensal = [0,0,0,0,0,0,0,0,0,0,3,0];
+        const ganhoMensal = [0,0,0,0,0,0,0,0,0,0,4,0];
+        const resultadoMensal = [0,0,0,0,0,0,0,0,0,0,1,0];
+        const config = {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Evolução das despesas',
+                    data: despesaMensal,
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    backgroundColor: 'rgba(255, 0, 0, 1)',
+                    fill: false,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(255, 0, 0, 1)',
+                    pointRadius: 5
+                },
+                {
+                    label: 'Evolução dos ganhos',
+                    data: ganhoMensal,
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    backgroundColor: 'rgba(0, 255, 0, 1)',
+                    fill: false,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(0, 255, 0, 1)',
+                    pointRadius: 5
+                },
+                {
+                    label: 'Evolução dos resultados',
+                    data: resultadoMensal,
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    backgroundColor: 'rgba(255, 255, 0, 1)',
+                    fill: false,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(255, 255, 0, 1)',
+                    pointRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { labels: { color: 'white', font: { size: 15, family: "Josefin Sans" } } },
+                    title: { display: true, text: 'Evolução dos resultados de exercício', color: 'white', font: { size: 18, family: "Josefin Slab" } },
+                    tooltip: { backgroundColor: 'rgba(0, 0, 0, 0.7)', titleColor: 'white', bodyColor: 'white' }
+                },
+                scales: {
+                    x: { ticks: { color: 'white', font: { family: "Josefin Sans" } } },
+                    y: { ticks: { color: 'white', font: { family: "Josefin Sans" }, beginAtZero: true } }
+                }
+            }
+        };
+        new Chart(linhaexctx, config);
+    }
+
+        // Chamar funções para criar os gráficos iniciais
+        createFluxoDeCaixaChart();
+        createLucrosChart();
+        createExerciciochart();
+        createDesempenhoChart(0);  // Iniciar com o mês de janeiro
+        function updateChart(monthIndex) {
+            createChart(monthIndex);
+        }
+        function capturarDadosPlanilha(event) {
+            const file = event.target.files[0]; // Obtém o arquivo selecionado
+            if (!file) {
+                alert("Nenhum arquivo selecionado!");
+                return;
+            }
+        
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const data = new Uint8Array(e.target.result); // Converte para Uint8Array
+                const workbook = XLSX.read(data, { type: "array" }); // Lê o arquivo como uma planilha
+        
+                // Obtém a primeira aba (sheet)
+                const sheetName = workbook.SheetNames[0];
+                const sheet = workbook.Sheets[sheetName];
+        
+                // Converte os dados da aba para JSON
+                const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+        
+                console.log(jsonData); // Exibe os dados no console
+                processarDados(jsonData); // Chama outra função para manipular os dados (opcional)
+            };
+        
+            reader.readAsArrayBuffer(file); // Lê o arquivo como ArrayBuffer
+        }
+        
+        function processarDados(dados) {
+            // Aqui você pode manipular os dados capturados
+            console.log("Dados capturados:", dados);
+        }
+        capturarDadosPlanilha();        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Studio Aura — design de interiores e arquitetura de alto padrão em São Paulo. Luxo discreto, materiais nobres e luz que revela textura."
+    />
+    <title>Studio Aura | Interiores de Alto Padrão</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Hanken+Grotesk:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="site-header" data-site-header>
+      <div class="header-inner">
+        <a class="logo" href="#">Studio Aura</a>
+        <nav class="nav-desktop" aria-label="Principal">
+          <a data-nav-link href="#portfolio">Portfólio</a>
+          <a data-nav-link href="#processo">Processo</a>
+          <a data-nav-link href="#sobre">Sobre</a>
+          <a data-nav-link href="#contato">Contato</a>
+        </nav>
+        <a class="btn header-cta" href="#contato">Iniciar conversa</a>
+        <button
+          type="button"
+          class="menu-toggle"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="menu-mobile"
+          aria-label="Abrir menu"
+        >
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M4 7h16M4 12h16M4 17h16"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="square"
+            />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <nav id="menu-mobile" class="nav-mobile" data-nav-mobile aria-label="Mobile">
+      <a data-nav-link href="#portfolio">Portfólio</a>
+      <a data-nav-link href="#processo">Processo</a>
+      <a data-nav-link href="#sobre">Sobre</a>
+      <a data-nav-link href="#contato">Contato</a>
+    </nav>
+
+    <main id="conteudo">
+      <section class="hero" aria-label="Abertura">
+        <div class="hero__media">
+          <video data-hero-video muted loop playsinline autoplay preload="metadata"></video>
+        </div>
+        <div class="hero__content">
+          <div class="hero__copy">
+            <p class="label hero__eyebrow">Design de interiores e arquitetura</p>
+            <h1 class="display hero__title">Interiores pensados como galeria habitável</h1>
+            <p class="body-lg hero__lede muted">
+              Projeto e curadoria para quem busca silêncio visual, materiais honestos e proporções
+              precisas. Cada ambiente traduz identidade sem ruído.
+            </p>
+            <a class="btn btn--ghost-gold" href="#portfolio">
+              Ver portfólio
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M12 5v14M5 12l7 7 7-7"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </a>
+          </div>
+          <aside class="hero__meta" aria-label="Destaques">
+            <div>
+              <span>Escritório</span>
+              <strong>São Paulo</strong>
+            </div>
+            <div>
+              <span>Atendimento</span>
+              <strong>Sob consulta</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="layers" id="processo">
+        <div class="container layers__grid">
+          <div class="layers__video-wrap reveal">
+            <video
+              data-layers-video
+              muted
+              loop
+              playsinline
+              autoplay
+              preload="metadata"
+            ></video>
+          </div>
+          <div class="layers__intro reveal">
+            <h2 class="headline-lg">Processo em camadas</h2>
+            <p class="body-md">
+              Do primeiro traço à entrega, o projeto ganha densidade gradual: conceito, materiais,
+              luz e execução. O vídeo ao lado sintetiza essa leitura em estratos — como apresentamos
+              cada estudo ao cliente.
+            </p>
+            <div class="layers__steps">
+              <article class="step">
+                <span class="step__num">01</span>
+                <div class="step__body">
+                  <h3 class="headline-md">Imersão</h3>
+                  <p class="body-md">
+                    Escuta ativa, referências e restrições reais. Definimos ritmo de uso, luz natural
+                    e a economia de detalhes que o espaço pede.
+                  </p>
+                </div>
+              </article>
+              <article class="step">
+                <span class="step__num">02</span>
+                <div class="step__body">
+                  <h3 class="headline-md">Conceito e materiais</h3>
+                  <p class="body-md">
+                    Paleta contida, textura e escala. Cada escolha aparece em camadas legíveis, com
+                    amostras físicas e visualizações sob medida.
+                  </p>
+                </div>
+              </article>
+              <article class="step">
+                <span class="step__num">03</span>
+                <div class="step__body">
+                  <h3 class="headline-md">Obra acompanhada</h3>
+                  <p class="body-md">
+                    Cronograma, fornecedores e visitas técnicas alinhadas ao desenho. O resultado
+                    final preserva a intenção original sem concessões silenciosas.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="portfolio__head reveal">
+            <h2 class="headline-lg">Portfólio</h2>
+            <a class="link-arrow" href="#contato">
+              Solicitar apresentação completa
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="portfolio__grid">
+            <article class="portfolio__item reveal" data-portfolio-item>
+              <img src="" alt="Projeto de interiores em tons escuros, sala ampla." loading="lazy" />
+              <div class="portfolio__caption">
+                <p class="label" data-portfolio-label></p>
+                <h3 class="headline-md" data-portfolio-title></h3>
+              </div>
+            </article>
+            <article class="portfolio__item reveal" data-portfolio-item>
+              <img src="" alt="Detalhe de cozinha com ilha em pedra escura." loading="lazy" />
+              <div class="portfolio__caption">
+                <p class="label" data-portfolio-label></p>
+                <h3 class="headline-md" data-portfolio-title></h3>
+              </div>
+            </article>
+            <article class="portfolio__item reveal" data-portfolio-item>
+              <img src="" alt="Banheiro principal com banheira e iluminação indireta." loading="lazy" />
+              <div class="portfolio__caption">
+                <p class="label" data-portfolio-label></p>
+                <h3 class="headline-md" data-portfolio-title></h3>
+              </div>
+            </article>
+            <article class="portfolio__item reveal" data-portfolio-item>
+              <img src="" alt="Escada esculpida com guarda-corpo em vidro." loading="lazy" />
+              <div class="portfolio__caption">
+                <p class="label" data-portfolio-label></p>
+                <h3 class="headline-md" data-portfolio-title></h3>
+              </div>
+            </article>
+            <article class="portfolio__item reveal" data-portfolio-item>
+              <img src="" alt="Sala de jantar com mesa longa e luminária linear." loading="lazy" />
+              <div class="portfolio__caption">
+                <p class="label" data-portfolio-label></p>
+                <h3 class="headline-md" data-portfolio-title></h3>
+              </div>
+            </article>
+            <article class="portfolio__item reveal" data-portfolio-item>
+              <img src="" alt="Suíte com cabeceira texturizada e iluminação pontual." loading="lazy" />
+              <div class="portfolio__caption">
+                <p class="label" data-portfolio-label></p>
+                <h3 class="headline-md" data-portfolio-title></h3>
+              </div>
+            </article>
+            <article class="portfolio__item reveal" data-portfolio-item>
+              <img src="" alt="Composição de materiais: pedra, madeira e vidro bronze." loading="lazy" />
+              <div class="portfolio__caption">
+                <p class="label" data-portfolio-label></p>
+                <h3 class="headline-md" data-portfolio-title></h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="sobre">
+        <div class="container about__grid">
+          <div class="about__text reveal">
+            <p class="label">A fundadora</p>
+            <h2 class="headline-lg">Marina Vasconcelos</h2>
+            <p class="body-md">
+              Arquiteta à frente do Studio Aura, com trabalho que cruza desenho de interiores e
+              arte contemporânea. A base é São Paulo; o escopo é internacional quando o projeto pede
+              presença no exterior.
+            </p>
+            <p class="body-md">
+              O estúdio evita excesso decorativo. Prioriza materiais nobres, leitura clara da luz e
+              mobiliário sob medida. Cada entrega funciona como um conjunto silencioso — onde o olhar
+              descansa e a textura aparece com calibragem fina.
+            </p>
+            <p class="quote-inline">
+              O luxo que me interessa é o que não grita: proporção exata, silêncio visual e luz
+              desenhada para revelar o tacto das superfícies.
+            </p>
+          </div>
+          <figure class="about__figure reveal">
+            <div class="about__figure-inner">
+              <img
+                data-about-portrait
+                src=""
+                alt="Retrato editorial da arquiteta Marina Vasconcelos."
+                loading="lazy"
+              />
+              <span class="corner-accent corner-accent--tr" aria-hidden="true"></span>
+              <span class="corner-accent corner-accent--bl" aria-hidden="true"></span>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-label="Depoimentos">
+        <div class="container testimonials__inner">
+          <svg class="testimonials__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M7.5 7h-3c-.55 0-1 .45-1 1v9H8V8.5C8 7.67 7.33 7 6.5 7h1zm9 0h-3c-.55 0-1 .45-1 1v9H17V8.5c0-.83-.67-1.5-1.5-1.5h1z"
+            />
+          </svg>
+          <div class="reveal">
+            <div class="testimonial">
+              <blockquote>
+                O Studio Aura traduziu nossa casa em linguagem espacial. Luz, textura e escala
+                conversam o dia inteiro sem parecer cenário — parece moradia de verdade.
+              </blockquote>
+              <cite>Família Almeida Praia</cite>
+            </div>
+            <div class="divider-dot" aria-hidden="true"></div>
+            <div class="testimonial">
+              <blockquote>
+                Ambientes que lembram galeria, mas acolhem. Marina domina o difícil: rigor formal com
+                calor humano, sem estética genérica.
+              </blockquote>
+              <cite>Dr. Eduardo Mansur</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contato">
+        <div class="container contact__grid">
+          <div class="contact__lede reveal">
+            <h2 class="display">
+              Inicie um<br />
+              diálogo.
+            </h2>
+            <p class="body-md">
+              Projetos exclusivos pedem tempo e alinhamento. Escolha um canal abaixo ou envie a
+              mensagem — retornamos com agenda e próximos passos.
+            </p>
+            <dl class="contact__details">
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:contato@studioaura.com.br">contato@studioaura.com.br</a></dd>
+              </div>
+              <div>
+                <dt>Local</dt>
+                <dd>São Paulo, SP — Brasil</dd>
+                <dd class="muted" style="font-size: 14px; margin-top: 6px">
+                  Atendimento com hora marcada
+                </dd>
+              </div>
+            </dl>
+            <a class="btn btn--primary-solid" data-whatsapp href="#">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+              WhatsApp
+            </a>
+          </div>
+          <div class="contact__form-wrap reveal">
+            <span class="form-corner" aria-hidden="true"></span>
+            <form class="contact-form" data-contact-form novalidate>
+              <div class="form-field">
+                <label for="field-name">Nome completo</label>
+                <input id="field-name" name="name" type="text" autocomplete="name" />
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-field">
+                <label for="field-email">E-mail</label>
+                <input id="field-email" name="email" type="email" autocomplete="email" />
+                <p class="form-error" role="alert"></p>
+              </div>
+              <div class="form-field">
+                <label for="field-interest">Interesse</label>
+                <select id="field-interest" name="interest">
+                  <option>Projeto residencial</option>
+                  <option>Projeto comercial</option>
+                  <option>Consultoria pontual</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="field-message">Mensagem</label>
+                <textarea id="field-message" name="message" rows="4"></textarea>
+                <p class="form-error" role="alert"></p>
+              </div>
+              <button class="btn form-submit" type="submit">Enviar mensagem</button>
+              <p class="form-status" data-form-status></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="logo">Studio Aura</div>
+        <nav class="footer-links" aria-label="Redes sociais">
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Pinterest</a>
+          <a data-whatsapp href="#">WhatsApp</a>
+        </nav>
+        <p class="footer-copy">© 2026 Studio Aura. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>

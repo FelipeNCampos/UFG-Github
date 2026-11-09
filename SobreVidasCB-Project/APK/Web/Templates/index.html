@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Img/logo.png" />
+    <link rel="stylesheet" href="./Style/inicio.css"/>
+    <title>SobreVidasCB</title>
+</head>
+<body>
+    
+    <div class="divmaior"> <img src="./Img/blurfundo.png" style="border-radius: 30px; position: absolute;"> 
+        <div class="LOGO"> <img src="./Img/logo.png" alt="logo"> </div>
+        <p class="sobrevidas">
+         <span style="color: #2260FF;">SobreVidas</span>
+         <span style="color: white;">CB</span><br>
+       </p>
+      <br>
+          <button class="entrar" onclick="redirectToLoginPage()">Entrar</button>
+          <script>
+            function redirectToLoginPage() {
+                window.location.href = "/login";
+            }
+        </script>
+          <br><br>
+          <button class="cadastro" onclick="redirectToCadastroPage()" >Cadastrar</button>
+          <script>
+            function redirectToCadastroPage() {
+                window.location.href = "/cadastro"; 
+            }
+        </script>
+         </div>
+
+</body>
+</html>

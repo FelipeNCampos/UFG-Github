@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Finance Control</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .left-side {
+      width: 60%;
+    }
+
+    .right-side {
+      width: 40%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .header {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table th,
+    .table td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .table th {
+      background-color: #f2f2f2;
+    }
+
+    .select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .input {
+      width: 100%;
+      padding: 1 ```html
+0px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-side">
+      <div class="header">Finance Control Dashboard</div>
+      <div class="section">
+        <div class="section-title">Recent Transactions</div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Category</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2023-10-01</td>
+              <td>$100</td>
+              <td>Income</td>
+              <td>Salary</td>
+            </tr>
+            <tr>
+              <td>2023-10-02</td>
+              <td>$50</td>
+              <td>Expense</td>
+              <td>Groceries</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="right-side">
+      <div class="section">
+        <div class="section-title">Add Transaction</div>
+        <input type="text" class="input" placeholder="Amount" id="amount">
+        <select class="select" id="category">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+        <input type="text" class="input" placeholder="Description" id="description">
+        <button class="button" onclick="addTransaction()">Add</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function addTransaction() {
+      const amount = document.getElementById('amount').value;
+      const category = document.getElementById('category').value;
+      const description = document.getElementById('description').value;
+
+      if (amount && description) {
+        alert(`Transaction added: ${amount} - ${category} - ${description}`);
+        // Here you can add code to save the transaction
+      } else {
+        alert('Please fill in all fields');
+      }
+    }
+  </script>
+</body>
+</html>

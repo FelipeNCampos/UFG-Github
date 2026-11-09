@@ -1,0 +1,11 @@
+var
+    float temp
+
+inicio
+    leia linha guarde em temp
+    se temp<=300:
+        escreva "SALARIO COM REAJUSTE = "+temp*1.5
+    senao:
+        escreva "SALARIO COM REAJUSTE = "+temp*1.3
+
+fim

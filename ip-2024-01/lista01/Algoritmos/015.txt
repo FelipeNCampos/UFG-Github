@@ -1,0 +1,8 @@
+var
+    int temp;
+
+inicio
+    leia linha guarde em temp
+    para c de 2 ate temp de 2 em 2 faca:
+        escreva c+"^2"+"="c*c
+fim

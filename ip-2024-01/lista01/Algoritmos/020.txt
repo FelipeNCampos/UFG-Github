@@ -1,0 +1,9 @@
+var 
+    int h,m,s;
+
+inicio
+    leia linha guarde em h
+    leia linha guarde em m
+    leia linha guarde em s
+    escreva "O TEMPO EM SEGUNDOS E = "+(s+m*60+h*3600)
+fim

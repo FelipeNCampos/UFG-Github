@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico Interativo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background-color: #DDEAF3;
+            font-family: "Arial", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        canvas {
+            width: 80% !important;
+            height: 400px !important;
+        }
+        .info-box {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #00538c;
+            color: white;
+            border-radius: 5px;
+            display: none; /* Inicialmente oculta */
+        }
+        .tooltip-box {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none; /* Inicialmente oculta */
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="fluxoDeCaixa"></canvas>
+    <div id="info-box" class="info-box">
+        <strong>Detalhes:</strong>
+        <p id="entrada"></p>
+        <p id="saida"></p>
+        <p id="saldo"></p>
+    </div>
+
+    <div id="tooltip-box" class="tooltip-box"></div>
+
+    <script>
+        const ctx = document.getElementById('fluxoDeCaixa').getContext('2d');
+
+        const despesas = [-500, -300, -400, -250, -600, -700, -450, -500, -300, -400, -600, -350];
+        const rendimentos = [800, 600, 700, 900, 500, 650, 800, 700, 600, 750, 900, 850];
+        const saldoMensal = rendimentos.map((rendimento, index) => rendimento + despesas[index]);
+
+        const data = {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            datasets: [
+                {
+                    label: 'Despesas',
+                    data: despesas,
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(255, 99, 132, 0.5)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Rendimentos',
+                    data: rendimentos,
+                    backgroundColor: 'rgba(0, 128, 0, 0.5)',
+                    borderColor: 'rgba(54, 162, 235, 0.5)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Saldo Mensal',
+                    data: saldoMensal,
+                    type: 'line',
+                    fill: false,
+                    borderColor: 'rgba(0, 0, 0, 1)',
+                    tension: 0.3,
+                    borderWidth: 2,
+                    pointBackgroundColor: 'rgba(0, 0, 0, 1)',
+                }
+            ]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                onClick: function (e) {
+                    const activePoints = chart.getElementsAtEventForMode(e, 'nearest', {intersect: true}, true);
+                    if (activePoints.length > 0) {
+                        const firstPoint = activePoints[0];
+                        const label = chart.data.labels[firstPoint.index];
+                        const despesasValue = despesas[firstPoint.index];
+                        const rendimentosValue = rendimentos[firstPoint.index];
+                        const saldoValue = saldoMensal[firstPoint.index];
+
+                        // Exibe as caixas de entrada, saída e saldo
+                        document.getElementById("entrada").innerText = `Entrada: R$ ${rendimentosValue}`;
+                        document.getElementById("saida").innerText = `Saída: R$ ${despesasValue}`;
+                        document.getElementById("saldo").innerText = `Saldo: R$ ${saldoValue}`;
+
+                        document.getElementById("info-box").style.display = 'block'; // Exibe a caixa de informações
+                    }
+                },
+                onHover: function (e) {
+                    const activePoints = chart.getElementsAtEventForMode(e, 'nearest', {intersect: true}, true);
+                    const tooltipBox = document.getElementById("tooltip-box");
+
+                    if (activePoints.length > 0) {
+                        const firstPoint = activePoints[0];
+                        const label = chart.data.labels[firstPoint.index];
+                        const despesasValue = despesas[firstPoint.index];
+                        const rendimentosValue = rendimentos[firstPoint.index];
+                        const saldoValue = saldoMensal[firstPoint.index];
+
+                        tooltipBox.style.display = 'block'; // Exibe o tooltip
+                        tooltipBox.innerHTML = `
+                            <strong>${label}</strong><br>
+                            Entrada: R$ ${rendimentosValue}<br>
+                            Saída: R$ ${despesasValue}<br>
+                            Saldo: R$ ${saldoValue}
+                        `;
+                    } else {
+                        tooltipBox.style.display = 'none'; // Oculta o tooltip quando não está em cima de um ponto
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white',
+                            font: {
+                                size: 15,
+                                family: "Josefin Sans",
+                            }
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Fluxo de Caixa',
+                        color: 'white',
+                        font: {
+                            size: 15,
+                            family: "Josefin Sans",
+                        }
+                    },
+                    tooltip: {
+                        enabled: false // Desativa o tooltip padrão do Chart.js
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                            color: 'white',
+                        },
+                        title: {
+                            display: false,
+                            text: 'Meses',
+                            color: 'white',
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        ticks: {
+                            color: 'white',
+                        },
+                        title: {
+                            display: false,
+                            text: 'Valores',
+                            color: 'white',
+                        }
+                    }
+                }
+            }
+        };
+
+        const chart = new Chart(ctx, config);
+    </script>
+</body>
+</html>

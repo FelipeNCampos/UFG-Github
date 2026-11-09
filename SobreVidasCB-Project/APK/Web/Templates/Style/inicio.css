@@ -1,0 +1,84 @@
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+
+    
+    
+       .sobrevidas {
+        position: relative;
+        width: 530px;
+        height: 142px;
+        top: 150px;
+        left: 110px;
+        font-family: "Bitter-Bold", Helvetica;
+        font-weight: 700;
+        color: transparent;
+        font-size: 60px;
+        text-align: center;
+        letter-spacing: 0;
+        line-height: normal;
+        margin-bottom: 100px;
+    }
+       
+       .divmaior {
+        position: relative;
+        background-color: #9BCCFA;
+        width: 744px;
+        height: 1133px;
+        border-radius: 30px;
+    }
+      .LOGO {
+        position: relative;
+        top: 100px;
+        left: 183px;
+        
+    
+    }
+    .entrar {
+        cursor: pointer;
+        border: none;
+        position: relative;
+        top: 80px;
+        left: 200px;
+        font-family: "Source Sans Pro-Black", Helvetica;
+        font-weight: 900;
+        color: #0216C5;
+        font-size: 25px;
+        letter-spacing: 0;
+        background-color: #ffffff;
+        border-radius: 27px;
+        width: 360px;
+        height: 70px;
+
+
+    }
+    .entrar:hover{
+        background-color: whitesmoke;
+    }
+
+    .cadastro {
+        cursor: pointer;
+        border: none;
+        position: relative;
+        top: 80px;
+        left: 200px;
+        font-family: "Source Sans Pro-Black", Helvetica;
+        font-weight: 900;
+        color: #ffffff;
+        font-size: 25px;
+        letter-spacing: 0;
+        background-color: #0216C5;
+        border-radius: 27px;
+        width: 360px;
+        height: 73px;
+    }
+    .cadastro:hover{
+        background-color: blue;
+    }
+    }

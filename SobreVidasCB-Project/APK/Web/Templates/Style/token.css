@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+
+    a {
+        color: #0216C5;
+    }
+
+   .login {
+position: relative;
+text-align: center;
+top: -10px;
+font-family: "League Spartan", Helvetica;
+font-size: 15px;
+font-weight: 600;
+line-height: 20px;
+
+
+}
+.login:hover{
+    font-size: 110%;
+
+}
+  input{
+    color: #0216C5;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 95px;
+    font-size: 45px;
+    font-style: Bold;
+    font-weight: 600;
+    position: relative;
+    top: -50px;
+    left: 65px;
+    width: 520px;
+    height: 98px;
+    border-radius: 30px;
+    padding-left: 100px;
+    z-index: 0;
+   
+}
+input:hover{
+    size: 110%;
+}
+
+
+   .sobrevidas {
+    position: relative;
+    width: 530px;
+    height: 142px;
+    top: -370px;
+    left: 110px;
+    font-family: "Bitter-Bold", Helvetica;
+    font-weight: 700;
+    color: transparent;
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+}
+   .Esqueceu {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "League Spartan-Bold", Helvetica;
+    font-size: 40px;
+ 
+}
+   .divmaior {
+    background-color: #9BCCFA;
+    width: 744px;
+    height: 1133px;
+    border-radius: 30px;
+}
+  .LOGO {
+    position: relative;
+    top: 171px;
+    left: 183px;
+    
+
+}
+
+.botao {
+    position: relative;
+    top: -20px;
+    left: 211px;
+    font-family: "Source Sans Pro-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 25px;
+    letter-spacing: 0;
+    background-color: #0216C5;
+    border-radius: 27px;
+    width: 345px;
+    height: 65px;
+}
+}

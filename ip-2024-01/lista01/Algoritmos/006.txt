@@ -1,0 +1,10 @@
+var
+    int temp
+    flaot reg
+
+inicio
+    leia linha guarde em temp
+    para c de 1 ate temp de 1 em 1 faca:
+        leia linha guarde em reg
+        escreva reg+"FAHRENHEIT EQUIVALE A "+((reg-32)*5)/9+"CELSIUS"
+fim

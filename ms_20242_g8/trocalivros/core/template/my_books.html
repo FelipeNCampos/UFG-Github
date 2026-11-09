@@ -1,0 +1,117 @@
+{% extends 'base_home.html' %}
+
+{% block title %}
+	Meus Livros
+{% endblock %}
+
+{% block home_content %}
+	<div class="container mt-5">
+		<div class="d-flex justify-content-between align-items-center my-4">
+			<h2 class="text-primary">Meus Livros</h2>
+			<a href="{% url 'create_book' %}" class="btn btn-primary">Criar Livro</a>
+		</div>
+		<div class="row">
+			{% for book in page_obj %}
+				<div class="col-md-4 mb-4">
+					<div class="card shadow-sm h-100">
+						{% if book.get_first_image %}
+							<img src="{{ MEDIA_URL }}{{ book.get_first_image.image.url }}" class="card-img-top" alt="{{ book.title }}"
+									 style="height: 200px; object-fit: cover;">
+						{% endif %}
+						<div class="card-body">
+							<h5 class="card-title text-center fw-bolder">{{ book.title }}</h5>
+							<p class="card-text text-center text-muted">Author: {{ book.author }}</p>
+							<div class="d-flex justify-content-center">
+								<a class="btn btn-danger delete-book me-4" data-id="{{ book.id }}">Apagar</a>
+								<a href="{% url 'edit_book' book.id %}" class="btn btn-primary">Editar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		{% if not page_obj.object_list %}
+			<p class="text-center">Nenhum livro disponível no momento.</p>
+		{% endif %}
+
+		<div class="d-flex justify-content-center my-4">
+			<nav aria-label="Page navigation">
+				<ul class="pagination">
+					{% if page_obj.has_previous %}
+						<li class="page-item">
+							<a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="Anterior">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+					{% endif %}
+
+					{% for num in page_obj.paginator.page_range %}
+						<li class="page-item {% if page_obj.number == num %}active{% endif %}">
+							<a class="page-link" href="?page={{ num }}">{{ num }}</a>
+						</li>
+					{% endfor %}
+
+					{% if page_obj.has_next %}
+						<li class="page-item">
+							<a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="Próximo">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					{% endif %}
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div class="modal fade" id="deleteBookModal" tabindex="-1" aria-labelledby="deleteBookModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="deleteBookModalLabel">Confirmar Exclusão</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Tem certeza de que deseja excluir este livro?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary mr-2" data-bs-dismiss="modal" aria-label="Close">Cancelar
+					</button>
+					<button type="button" class="btn btn-danger" id="confirmDeleteBook">Apagar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block scripts %}
+	<script>
+      let bookIdToDelete;
+      const modal = new bootstrap.Modal(document.getElementById('deleteBookModal'));
+
+      document.querySelectorAll('.delete-book').forEach(button => {
+          button.addEventListener('click', function () {
+              bookIdToDelete = this.getAttribute('data-id');
+              modal.show();
+          });
+      });
+
+      document.getElementById('confirmDeleteBook').addEventListener('click', function () {
+          if (bookIdToDelete) {
+              const deleteUrl = `{% url 'delete_book' 0 %}`.replace('0', bookIdToDelete);
+              fetch(deleteUrl, {
+                  method: 'DELETE',
+                  headers: {
+                      'X-CSRFToken': '{{ csrf_token }}'
+                  }
+              })
+                  .then(response => {
+                      if (response.ok) {
+                          location.reload();
+                      } else {
+                          alert('Erro ao excluir o livro.');
+                      }
+                  });
+          }
+      });
+	</script>
+{% endblock %}

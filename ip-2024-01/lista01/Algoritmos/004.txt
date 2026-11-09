@@ -1,0 +1,12 @@
+var
+    int temp,pk;
+
+
+inicio
+    leia linha guarde em temp
+    pk = (temp*7/10)/100
+    leia linha guarde em temp
+    escreva "Cuspo por kW : R$"+pk
+    escreva "Custo do consumo :R$"+pk*temp
+    escreva "Custo com desconto :R$"+(pk*temp)*0.9
+fim

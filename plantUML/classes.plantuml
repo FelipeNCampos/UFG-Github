@@ -1,0 +1,47 @@
+@startuml
+
+class SistemaControleAcesso {
+    + autenticar(voz: String, video: Imagem): boolean
+    + controlarAcesso(): void
+    + controlarArCondicionado(): void
+    + controlarLuz(): void
+    + enviarMensagem(mensagem: String): void
+}
+
+class IA {
+    + processarVoz(voz: String): String
+    + processarVideo(video: Imagem): String
+}
+
+class Dispositivo {
+    + status: String
+    + ligar(): void
+    + desligar(): void
+}
+
+class ArCondicionado extends Dispositivo {
+    + ajustarTemperatura(temp: int): void
+}
+
+class Iluminacao extends Dispositivo {
+    + ajustarBrilho(nivel: int): void
+}
+
+class Acesso extends Dispositivo {
+    + permitirAcesso(): void
+    + negarAcesso(): void
+}
+
+class BancoDeDados {
+    + registrarEvento(evento: String): void
+    + recuperarDados(consulta: String): void
+}
+
+SistemaControleAcesso ..> IA
+SistemaControleAcesso --> BancoDeDados
+SistemaControleAcesso --> Acesso
+SistemaControleAcesso --> ArCondicionado
+SistemaControleAcesso --> Iluminacao
+IA ..> BancoDeDados
+
+@enduml

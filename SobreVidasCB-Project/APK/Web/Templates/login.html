@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobrevidasCB</title>
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="icon" href="Img/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="JS/visualizarsenha.js"></script>
+    <script src="JS/validarcpf.js" defer></script>
+    <script src="JS/login.js" defer></script> 
+</head>
+<body>
+    <div class="divmaior"> 
+        <img src="Img/blurFundo.png" style="border-radius: 30px; position: absolute;"> 
+        <div class="LOGO"> <img src="./Img/logo.png" alt="LOGO"> </div>
+        <p class="sobrevidas">
+            <span style="color: white;">SobreVidas</span>t
+            <span style="color: #9BCCFA;">CB</span>
+        </p>
+        <h1 class="Login">Login</h1>
+       
+        <div class="Digite">
+            <span>Digite Seu CPF</span><br><br><br><br>
+            <span>Digite Sua Senha</span>
+        </div>
+
+        <form action="/submitlogin" method="post">
+            <div>
+                <input type="text" placeholder="CPF" id="cpf" name="cpf"><br><br><br>
+            </div>
+
+            <div>
+                <input type="password" placeholder="Senha" id="senha" name="senha">
+                <i class="bi bi-eye-fill" id="btn-senha" onclick="mostarsenha()" style="position: relative; top: -49px; font-size: 22px; left: 170px; cursor: pointer; z-index: 3;"></i>
+            </div>
+
+            <div class="esqueceu">    
+                <br><br><br>
+                <a onclick="redirectToRecuperarPage()" >Esqueceu a senha?</a>
+                <button id="entrar" onclick="validarCPF()" style="cursor: pointer;">
+                    <p>Entrar</p>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function redirectToRecuperarPage(){
+            window.location.href="/recuperar"
+        }
+        </script>
+</html>
+</body>

@@ -1,0 +1,11 @@
+var 
+    int n,temp;
+
+
+inicio
+    leia linha guarde em n
+    para c de 1 ate n de 1 em 1 faca:
+        temp = temp + 1/c
+    escreva temp
+
+fim

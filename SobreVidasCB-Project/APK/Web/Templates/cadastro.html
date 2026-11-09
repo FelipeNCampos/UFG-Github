@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/cadastro.css">
+    <title>Paciente</title>
+</head>
+<body>
+    <conteudo style="background-image: url(./Img/fundo.png);">
+        <menu>
+            <img src="/Img/voltar.png" id="voltar" alt="Botão para voltar ao home.">
+            <h1>Cadastro de Paciente</h1>
+        </menu>
+        <form action="/submitpc" method="post">
+            <logotop>
+                <img src="/Img/logo.png" style="width: 200px;" alt="Logo Sobrevidas">
+                <div id="logoalt">
+                    <h2 style="color: blue;">SobreVidas</h2>
+                    <h2>Câncer de Boca</h2>
+                </div>
+            </logotop>
+            <section>
+                <h3>Informações pessoais</h3>
+                <bi>
+                    <label for="nome">Nome Completo*</label>
+                    <input type="text" name="nome" placeholder="Joâo Augusto Perreira">
+                </bi>
+                <bi>
+                    <label for="nome">Nome Completo da Mãe*</label>
+                    <input type="text" name="mae" placeholder="Maria Conceição Perreira">
+                </bi>
+                <bi>
+                    <label for="nome">Email*</label>
+                    <input type="text" name="email" placeholder="Joâo123@gmail.com">
+                </bi>
+
+                <bm>
+                    <bmm>
+                        <label for="cpf">CPF*</label>
+                        <input type="text" name="cpf" placeholder="123.123.123-00">
+                    </bmm>
+                    <bmm>
+                        <label for="genero">Gênero*</label>
+                        <select id="genero" name="genero">
+                            <option value="Não Informado">Prefiro não informar</option>
+                            <option value="Mulher Cis">Mulher Cis</option>
+                            <option value="Homem Cis">Homem Cis</option>
+                            <option value="Mulher Trans">Mulher Trans</option>
+                            <option value="Homem Trans">Homem Trans</option>
+                            <option value="Não-Binário">Não-Binário</option>
+                            <option value="Gênero Neutro">Gênero Neutro</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </bmm>
+                </bm>
+                <bm>
+                    <bmm>
+                        <label for="nascimento">Data de Nascimento*</label>
+                        <input type="text" name="nascimento" placeholder="12/02/2000">
+                    </bmm>
+                    <bmm>
+                        <label for="telefone">Telefone para contato*</label>
+                        <input type="text" name="telefone" placeholder="(62) 99123-1234">
+                    </bmm>
+                </bm>
+            </section>
+            <section>
+                <h3>Endereço / Território do Paciente</h3>
+                <upt>
+                    <box id="uf">
+                        <label for="UF">UF*</label>
+                        <input type="text" name="uf" placeholder="GO">
+                    </box>
+                    <box id="municipio">
+                        <label for="municipio">Municipio</label>
+                        <input type="text" placeholder="Goiãnia" name="municipio">
+                    </box>
+                </upt>
+
+                <bm>
+                    <bmm>
+                        <label for="cep">CEP</label>
+                        <input type="text" name="cep" placeholder="74956-347">
+                    </bmm>
+                    <bmm>
+                        <label for="bairro">Bairro</label>
+                        <input type="text" name="bairro" placeholder="Goiânia 2">
+                    </bmm>
+                </bm>
+                <bm>
+                    <bmm>
+                        <label for="numero" id="numero">Número</label>
+                        <input type="text" name="numero" placeholder="34">
+                    </bmm>
+                </bm>
+                <bi>
+                    <label for="complemento">Complemento (não obrigatório)</label>
+                    <input type="text" name="complemento">
+                </bi>
+            </section>
+
+            <button type="button" id="openPopup">Próximo</button>
+            <popup id="popup">
+                <h1 style="color: black;">Marcadores Obrigatórios</h1>
+                <hr style="border-color: black;">
+
+                <check>
+                    <label for="etilista">Etilista <br><span style="color: gray;font-size: 17px;">Faz consumo de álcool recorrentemente</span></label>
+                    <input id="check" type="checkbox" name="etilista">
+                </check>
+                <hr style="border-color: black;">
+                <check>
+                    <label for="tabagista">Tabagista <br> <span style="color: gray;font-size: 17px;">Fuma algum tipo de substância</span></label>
+                    <input id="check" type="checkbox" name="tabagista">
+                </check>
+                <hr style="border-color: black;">
+
+                <check>
+                    <label for="absteista">Possui alguma lesão na boca ?</label>
+                    <input id="check" type="checkbox" name="absteista">
+                </check>
+                
+                <h1 style="color: black;">Maradores Opcionais</h1>
+                <hr style="border-color: black;">
+
+                <check>
+                    <label for="rua">Está em situação de rua ?</label>
+                    <input id="check" type="checkbox" name="rua">
+                </check>
+                <hr style="border-color: black;">
+
+                <check>
+                    <label for="def">Portador de deficiência ?</label>
+                    <input id="check" type="checkbox" name="def">
+                </check>
+
+                <button type="submit" id="btnsub">Enviar dados</button>
+            </popup>
+        </form>
+    </conteudo>
+    <script src="/JS/cadastro.js" ></script>
+</body>
+</html>

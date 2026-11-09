@@ -1,0 +1,20 @@
+{% extends 'base_home.html' %}
+
+{% block title %}
+    {% if announcement %}Editar Anúncio{% else %}Criar Anúncio{% endif %}
+{% endblock %}
+
+{% block home_content %}
+    <div class="container mt-5">
+        <h2 class="text-center">{% if announcement %}Editar Anúncio{% else %}Criar Anúncio{% endif %}</h2>
+        <form method="POST" action="{% url 'manage_announcement'%}" class="shadow-sm p-4 rounded bg-white">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">
+                    {% if announcement %}Atualizar{% else %}Salvar{% endif %}
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

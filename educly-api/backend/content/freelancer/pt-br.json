@@ -1,0 +1,11 @@
+{
+  "plan": "freelancer",
+  "language": "pt-br",
+  "days": [
+    {
+      "id": 1,
+      "title": "Dia 1 - Freelancer Kickoff",
+      "content": "Visao geral do trilho freelancer com foco em posicionamento e execucao inicial."
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+[
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 1,
+    "content_index": 1,
+    "title": "🤖 Como o ChatGPT funciona?",
+    "content": "O ChatGPT é um programa de inteligência artificial treinado para entender e gerar texto.\n\nEle foi alimentado com bilhões de exemplos de livros, sites, artigos e conversas. Com isso, aprendeu padrões da linguagem humana.\n\nQuando você escreve uma pergunta, ele analisa o contexto e prevê, palavra por palavra, qual é a melhor resposta possível com base nesses padrões.\n\nEle não \"sabe\" as coisas como um humano. Ele reconhece padrões e responde com base em probabilidade.\n\nQuanto melhor o seu comando, melhor será o resultado.\n\nÉ uma das inteligências artificiais mais usadas do mundo. Ultrapassou 100 milhões de usuários em apenas 2 meses após o lançamento.\n\nHoje é utilizado por estudantes, empresas, programadores, criadores de conteúdo e grandes corporações.\n\nEstá integrado a ferramentas como navegadores, aplicativos, sistemas empresariais e plataformas de produtividade.\n\nEmpresas utilizam IA para reduzir tempo de tarefas em até 40% em atividades administrativas e de produção textual."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 2,
+    "content_index": 1,
+    "title": "🎯 Engenharia de Prompt: A Arte de Dar Ordens",
+    "content": "A Engenharia de Prompt não é apenas 'escrever perguntas'. É a nova forma de falar com as máquinas.\n\nAntigamente, para mandar um computador fazer algo, você precisava programar. Hoje, você só precisa saber **explicar**.\n\nPrompt Engineering é o ato de traduzir o que você quer em instruções que a IA entenda perfeitamente. Quem domina isso trabalha mais rápido e erra menos. Quem não domina, fica preso em respostas genéricas e inúteis."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 3,
+    "content_index": 1,
+    "title": "🎭 Personas: Seu Time de Especialistas no Bolso",
+    "content": "Personas não são personagens de teatro. No mundo da IA, elas são como 'filtros' que ajudam a máquina a focar no que importa.\n\nQuando você pede para a IA agir como um 'Chef de Cozinha', ela para de sugerir termos de engenharia e começa a usar palavras como 'refogar' e 'tempero'.\n\nAs personas servem para dar um ponto de vista especializado. Elas não transformam a IA em um humano, mas forçam o modelo a usar o vocabulário e o jeito de pensar de um profissional específico."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 4,
+    "content_index": 1,
+    "title": "🚀 Projeto Final: Lançando o App 'FitFlow'",
+    "content": "Hoje você vai combinar TUDO o que aprendeu. Imagine que você foi contratado para lançar o **FitFlow**, um app brasileiro que usa IA para criar treinos de apenas 15 minutos para pessoas ocupadas.\n\nSua missão é criar:\n1. O plano de marketing.\n2. O texto do site (Landing Page).\n3. Os e-mails para os clientes.\n4. Os roteiros para vídeos no TikTok/Instagram.\n\nVamos usar o método C.T.F.D. e as Personas que você dominou nos dias anteriores!"
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 5,
+    "content_index": 1,
+    "title": "🤖 Bem-vindo ao Claude: O Conselheiro Sábio",
+    "content": "Você já domina o ChatGPT. Agora, vai conhecer seu maior rival: o **Claude**, criado pela empresa Anthropic.\n\nEnquanto o ChatGPT é como um gênio criativo e às vezes rebelde, o Claude é como aquele **conselheiro experiente e ponderado**. Ele foi treinado com uma 'Constituição' (ética) própria para ser mais honesto, seguro e bom em seguir regras.\n\n\n\nHoje você vai descobrir que, para muitas tarefas profissionais, o Claude não é apenas uma alternativa — ele é a melhor escolha."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 6,
+    "content_index": 1,
+    "title": "✍️ Claude para Copy: O Escritor que Pensa",
+    "content": "O Claude tem uma 'personalidade' diferente na hora de escrever. Enquanto o ChatGPT é o vendedor animado de shopping, o Claude é o **Mentor Sábio**.\n\n\n\nEle prefere convencer pelo raciocínio e pela empatia do que por gritos e promessas exageradas. Se você precisa de um texto que passe autoridade e confiança, o Claude é a sua ferramenta definitiva."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 7,
+    "content_index": 1,
+    "title": "🎭 Personas: Contrate Especialistas Virtuais",
+    "content": "Criar uma persona não é 'brincar de teatrinho'. É uma técnica para fazer a IA acessar apenas os conhecimentos mais avançados de uma área específica.\n\nQuando você diz 'Aja como um Diretor Financeiro', a IA deixa de lado conversas genéricas e foca em termos como ROI, fluxo de caixa e cortes de custos. É como se ela estivesse 'vestindo o uniforme' daquela profissão para te dar uma resposta muito mais séria e precisa."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 8,
+    "content_index": 1,
+    "title": "🤖 Bem-vindo ao DeepSeek: A IA que Surpreendeu o Mundo",
+    "content": "Depois de dominar o ChatGPT e o Claude, é hora de conhecer o fenômeno vindo da China: o **DeepSeek**.\n\nO que torna essa IA especial não é apenas o nome, mas os números. Ela consegue superar o GPT-4 em tarefas de matemática e programação, gastando apenas 5% do valor que a OpenAI gastou para treinar seus modelos. \n\nPara você, isso significa uma coisa: **IA de altíssimo nível por um preço quase simbólico.** Hoje, o DeepSeek é a ferramenta favorita de programadores, engenheiros e analistas de dados."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 9,
+    "content_index": 1,
+    "title": "📊 DeepSeek: O Analista de Dados que não Dorme",
+    "content": "O DeepSeek é a ferramenta perfeita para quem precisa lidar com números. Ele não apenas faz contas; ele entende o que elas significam.\n\n\n\nEnquanto um analista humano pode levar horas limpando uma planilha bagunçada ou criando gráficos complexos, o DeepSeek faz isso em **minutos**. Ele é o seu braço direito para:\n- Limpar e organizar dados.\n- Criar fórmulas e códigos de análise (SQL e Python).\n- Explicar o que os resultados significam para o seu negócio."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 10,
+    "content_index": 1,
+    "title": "🚀 Projeto Final: O Cérebro Digital da 'DataSolutions'",
+    "content": "Hoje é o dia de aplicar TUDO. Você foi contratado pela **DataSolutions Inc** para criar um sistema que lê milhares de vendas, logs de erros e métricas de marketing automaticamente.\n\n\n\n**Seu desafio:** Criar um sistema que processe esses dados, ache problemas sozinho e crie relatórios para os diretores. \n\n**O Prazo:** 1 dia com DeepSeek (manualmente levaria 2 semanas!). Usaremos o método **B.U.I.L.D.** (Briefing, Entendimento, Implementação, Lançamento e Documentação)."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 11,
+    "content_index": 1,
+    "title": "🌐 Bem-vindo ao Gemini: A IA Conectada ao Agora",
+    "content": "Prepare-se para conhecer a IA que tem 'passaporte' para o mundo real. Enquanto o ChatGPT e o Claude às vezes ficam presos em informações de meses atrás, o **Gemini** está ligado diretamente à Pesquisa Google.\n\n\n\nIsso significa que ele sabe o que aconteceu hoje de manhã, qual a cotação do dólar agora ou qual a lei que acabou de ser aprovada. Ele não é apenas um chat; é um assistente que vê, ouve e pesquisa em tempo real."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 12,
+    "content_index": 1,
+    "title": "🚀 Gemini para Produtividade: Seu Assistente de Elite",
+    "content": "Você já sabe pesquisar, agora vai aprender a **executar**. O Gemini brilha na produtividade porque ele não está isolado; ele vive dentro do seu e-mail, dos seus documentos e da sua agenda.\n\n\n\nImagine uma ferramenta que entende seus prazos, resume suas conversas e prepara seus relatórios antes mesmo de você pedir. Hoje, vamos montar o seu 'Escritório Inteligente' para que você foque no que realmente importa."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 13,
+    "content_index": 1,
+    "title": "🎨 A IA com Olhos e Ouvidos: Multimodalidade",
+    "content": "Hoje você vai descobrir o superpoder exclusivo do Gemini: ele entende o mundo visual e auditivo.\n\nEnquanto outras IAs vivem em um mundo de palavras, o Gemini **enxerga**. Ele analisa fotos, vídeos, PDFs e áudios com uma precisão assustadora. \n\n\n\nIsso muda tudo porque você não precisa mais digitar tudo o que vê; basta tirar uma foto ou mandar um arquivo para a IA analisar para você."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 14,
+    "content_index": 1,
+    "title": "🍌 Bem-vindo ao NanoBanana: Seu Estúdio de Design 24h",
+    "content": "Chegou o momento de dar cor às suas ideias! O NanoBanana é a sua IA de criação visual. Com ela, você não precisa mais gastar milhares de reais com designers para tarefas do dia a dia.\n\n\n\n**O que muda agora:**\n- **Antes:** Esperava 10 dias por um logo e pagava caro.\n- **Agora:** Você cria 4 opções em 30 segundos, de graça ou por centavos.\n\nHoje você vai aprender o método científico para mandar a IA desenhar exatamente o que está na sua cabeça."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 15,
+    "content_index": 1,
+    "title": "🎨 Estilos Artísticos: Escolha seu Uniforme",
+    "content": "Imagine que você tem um time de artistas à sua disposição. Com a IA, você é o **Diretor de Arte** que decide quem vai fazer o trabalho.\n\n\n\nCada estilo comunica uma sensação diferente. Se você quer vender um relógio de luxo, usa uma foto real. Se quer ilustrar um livro infantil, usa aquarela. O estilo é a 'roupagem' que a IA coloca na sua ideia para ela fazer sentido no mundo real."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 16,
+    "content_index": 1,
+    "title": "🏆 Projeto Final: O Kit Visual da 'EcoFlow'",
+    "content": "Chegou a hora do desafio máximo! Você vai criar a identidade visual completa da **EcoFlow**, uma startup que ajuda pessoas a terem hábitos sustentáveis.\n\n\n\n**O que você vai entregar hoje:**\n1.  **Logo:** A alma da marca.\n2.  **Ícone de App:** O que aparece no celular.\n3.  **Banner:** A vitrine das redes sociais.\n4.  **Template de Post:** Para agilizar o dia a dia.\n5.  **Mockup de Produto:** Sua garrafa térmica em 3D.\n6.  **Mascote:** O rosto amigo da empresa.\n\nUm designer cobraria R$ 5.000 por isso. Você vai fazer por quase zero."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 17,
+    "content_index": 1,
+    "title": "🎯 Nano Banana: Sua Agência de Design Automática",
+    "content": "Você já domina as palavras e a lógica. Agora, vamos dominar o olhar. O Nano Banana é a IA que transforma intenções complexas em imagens de alta qualidade.\n\n\n\nEnquanto outras ferramentas apenas 'chutam' o que você quer, o Nano Banana entende o **contexto emocional** e a **intenção comercial**. Hoje, você vai aprender a criar desde logos minimalistas até campanhas visuais completas, economizando muito dinheiro e tempo de espera."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 18,
+    "content_index": 1,
+    "title": "🚀 Bem-vindo ao Lovable: De Ideia para App em Minutos",
+    "content": "### A REVOLUÇÃO DO DESENVOLVIMENTO COM IA\n\n**Você acabou de cruzar a fronteira.** Agora não é mais apenas usuário de IA — você é um **construtor de aplicações**.\n\n### O QUE É LOVABLE?\n\nLovable transforma linguagem natural em **aplicações web completas**.\n\n**COMPARE:**\n\n**Desenvolvimento Tradicional:**\n- Tempo: 2-6 meses\n- Custo: R$ 30.000 - R$ 150.000+\n- Habilidades: Programação + Design + DevOps\n- Complexidade: Alta\n\n**Lovable (com IA):**\n- Tempo: 2-48 horas\n- Custo: R$ 0 - R$ 500/mês\n- Habilidades: Saber descrever o que quer\n- Complexidade: Baixa\n\n### O QUE VOCÊ VAI CONSTRUIR HOJE:\n\n✅ **Landing page profissional** em 10 minutos\n✅ **Dashboard interativo** em 20 minutos\n✅ **SaaS mínimo viável** em 1 hora\n✅ **App com banco de dados** em 2 horas\n\n### POR QUE ISSO MUDA TUDO:\n\n1. **Democratização:** Qualquer pessoa pode criar software\n2. **Velocidade:** Ideia → Produto em horas, não meses\n3. **Custo:** 99% mais barato que desenvolvimento tradicional\n4. **Iteração:** Teste ideias em tempo real\n\n### MERCADO QUE VOCÊ ESTÁ ENTRANDO:\n\n**Dados 2024:**\n- **Mercado no-code/low-code:** US$ 31 bilhões\n- **Crescimento anual:** 40%\n- **Demanda por desenvolvedores low-code:** +5x oferta\n- **Salário médio especialista:** R$ 12.000 - R$ 25.000/mês\n\n**Oportunidade REAL:**\nVocê pode criar apps para clientes por **R$ 2.000 - R$ 10.000** em 1-2 semanas, quando antes custavam **R$ 50.000 - R$ 200.000**.\n\n### SUA META DO DIA:\n**Em 4 horas, você vai:**\n1. Criar uma landing page completa\n2. Construir um dashboard com gráficos\n3. Implementar um CRUD (Create, Read, Update, Delete)\n4. Publicar seu primeiro app online\n\n**Vamos construir!** 🚀"
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 19,
+    "content_index": 1,
+    "title": "🚀 Aprofundando sobre Lovable.",
+    "content": "Hoje você deixa de ser apenas um usuário de IA para se tornar um **Criador de Softwares** com visão de produto. O Lovable é uma plataforma de IA que entende o que você quer, gera o código completo e já entrega o site ou aplicativo funcionando para você revisar, ajustar e publicar.\n\n\n\n**A Grande Diferença:**\n* **Antigamente:** Para criar um app funcional, você precisava contratar designer, programador, alguém de infraestrutura, esperar 3 meses e investir R$ 50.000 ou mais em um MVP básico.\n* **Hoje:** Você consegue validar a mesma ideia em 2 horas usando o Lovable, com custo inicial quase zero, podendo iterar várias versões no mesmo dia.\n\nNa prática, você vai aprender a criar páginas de vendas enxutas, painéis de controle (dashboards) conectados a dados reais e sistemas de cadastro completos — tudo isso apenas descrevendo o que precisa em linguagem natural, como se estivesse explicando a um colega de time."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 20,
+    "content_index": 1,
+    "title": "⚙️ Lovable Avançado: Dando um Cérebro ao seu App",
+    "content": "Você já sabe criar telas bonitas. Agora, vamos aprender a criar o que chamamos de **Backend** — a parte 'invisível' que faz o trabalho pesado.\n\nImagine que o seu app é um restaurante: a Interface é o salão decorado, mas o Backend é a cozinha, onde a mágica realmente acontece.\n\n**O que o Lovable faz por você:**\n1. **Cria Gavetas (Banco de Dados):** Guarda nomes e senhas com segurança.\n2. **Chave de Acesso (Autenticação):** Cria telas de login profissionais.\n3. **Porteiro Inteligente (Segurança):** Garante que um usuário não mexa nos dados do outro."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 21,
+    "content_index": 1,
+    "title": "🚀 Lovable para Negócios: Sua Fábrica de Software",
+    "content": "Parabéns por chegar ao último nível! Hoje, deixamos de criar sites simples para construir **negócios escaláveis**. Enquanto um site apenas informa, um **SaaS (Software como Serviço)** resolve problemas e gera lucro através de assinaturas.\n\n\n\nCom o Lovable, você tem o poder de uma equipe inteira de engenheiros. O que antes exigia 6 meses de trabalho e R$ 100.000 em salários, agora você entrega em 2 dias com precisão profissional."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 22,
+    "content_index": 1,
+    "title": "🎬 Bem-vindo ao Captions: Seu Estúdio de Cinema no Bolso",
+    "content": "Você já domina textos e imagens, agora vai dominar o formato mais poderoso das redes sociais. O **Captions** não é só um app de legendas; é um editor que 'pensa' por você.\n\n\n\n**O que mudou:**\n- **Antes:** Você levava 5 horas para editar um vídeo de 1 minuto.\n- **Agora:** A IA faz o trabalho pesado em 30 segundos. Ela corta os erros, melhora a sua voz e até 'conserta' o seu olhar se você não estiver olhando para a lente."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 23,
+    "content_index": 1,
+    "title": "🎭 Apresentadores Virtuais: Sua Equipe que Nunca Dorme",
+    "content": "Você já sabe editar vídeos, agora vai aprender a criar os **Apresentadores**. Avatares de IA são personagens digitais realistas que falam o seu roteiro com expressões humanas.\n\n\n\n**Por que isso muda o jogo?**\n- **Escala:** Crie 50 vídeos em uma tarde.\n- **Idiomas:** Seu avatar pode falar inglês, mandarim ou espanhol fluentemente.\n- **Sem Cansaço:** Ele não erra as falas, não precisa de maquiagem e está sempre pronto."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 24,
+    "content_index": 1,
+    "title": "🚀 Captions: Sua Fábrica de Virais",
+    "content": "O Captions não apenas legenda; ele otimiza cada segundo para manter as pessoas assistindo.\n\n### Por que ele é diferente?\n1. **Ganchos Automáticos:** Sugere o melhor início para o vídeo.\n2. **Ritmo Ágil:** Remove silêncios e pausas desnecessárias.\n3. **Design de Retenção:** Fontes que prendem o olhar.\n4. **IA de Sucesso:** Sugere melhorias baseadas no que está bombando."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 25,
+    "content_index": 1,
+    "title": "🎙️ ElevenLabs: A Voz Perfeita da IA",
+    "content": "Prepare-se para conhecer a tecnologia que acabou com as vozes de 'robô' do passado. O **ElevenLabs** é o líder mundial em transformar texto em fala natural.\n\n\n\n**O que torna ele especial:**\n- **Realismo:** Ele adiciona respirações, pausas e entonações de acordo com o sentimento do texto.\n- **Clonagem:** Você pode gravar 1 minuto da sua voz e a IA passará a falar qualquer texto com o seu timbre exato.\n- **Multilíngue:** Você pode falar japonês ou alemão sem saber uma palavra desses idiomas."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 26,
+    "content_index": 1,
+    "title": "🎭 Crie seu Gêmeo Digital: A Arte da Clonagem de Voz",
+    "content": "Bem-vindo ao dia em que você ganha o dom da onipresença sonora! Hoje você vai aprender a **clonar sua própria voz** com IA. \n\nImagine poder narrar um livro inteiro, dublar um vídeo em japonês ou criar 50 episódios de podcast sem precisar gravar cada um deles. O **ElevenLabs** não apenas repete o que você diz; ele captura a sua essência: o seu timbre, o seu sotaque e as emoções do seu jeito de falar.\n\n\n\nHoje, essa é uma das habilidades mais valiosas do mercado, permitindo que você produza conteúdo em escala industrial por uma fração do custo tradicional."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 27,
+    "content_index": 1,
+    "title": "🚀 Integração Total: O Segredo dos Grandes Criadores",
+    "content": "Hoje é o dia de unir forças. Criar conteúdo de forma isolada é cansativo e lento. Mas, quando você conecta as IAs, elas trabalham como uma engrenagem perfeita.\n\n\n\n**O que você vai construir hoje:**\nUm sistema onde uma ideia vira um roteiro, que vira uma narração, que vira um vídeo editado e uma série de posts para redes sociais. Tudo isso enquanto você toma um café. Vamos transformar produtividade em **super-produtividade**."
+  },
+  {
+    "plan": "desafio_iniciante_ia",
+    "language": "pt-br",
+    "day_id": 28,
+    "content_index": 1,
+    "title": "🎉 Missão Cumprida: Você é um Graduado EduclY!",
+    "content": "Parabéns! Você acaba de concluir uma das jornadas mais intensas e transformadoras do mercado digital. Em apenas 28 dias, você percorreu o caminho que muitos levam anos para entender.\n\n\n\nEste certificado que você recebe hoje não é apenas um papel; é a prova de que você domina um arsenal de 8 ferramentas de elite. Você não apenas 'usa' IA, você **constrói soluções**. O mercado agora olha para você de um jeito completamente diferente."
+  }
+]

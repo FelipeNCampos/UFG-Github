@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="./style/acshome.css">
+    <link rel="icon" href="./Img/logo.png">
+    <title>ACS Home</title>
+</head>
+<body>
+    <corpo style="background-image: url(./Img/fundo.png);">
+        <header>
+            <img src="./Img/logo.png" id="logo" style="width: 93px;height: 93px;" alt="logo">
+            <div id="altlogo">
+                <p><strong>SobreVidas</strong></p>
+                <p style="margin-top: -5px;color: gray;"><strong>Câncer de boca</strong></p>
+            </div>
+            <div id="altperfil">
+                <p style="font-size: 20px;">{{ .Nome }}</p>
+                <p style="color: gray; font-size: 12px;margin-top: -20px;">Agente Comunitário de saúde</p>
+            </div>
+            <div id="btnsair">
+                <a onclick="Off()" >
+                <img src="./Img/sair.png" alt="botao de sair">
+                </a>
+            </div>
+        </header>
+        <aside>
+            <div id="noticias">
+                <img src="./Img/conteudo.png" id="conteudo" style="width: 558px;height: 700px;" alt="imagem de conscientização sobre câncer de boca" usemap="#menuconteudo">
+                <map name="menuconteudo">
+                    <area shape="circle" coords="246,655,15" onclick="trocar(1)" >
+                    <area shape="circle" coords="281,655,15" onclick="trocar(2)" >
+                    <area shape="circle" coords="312,655,15" onclick="trocar(3)" >
+                </map>
+            </div>
+        </aside>
+        <menu>
+            <a onclick="redirectToCadastroPage()">
+                <script>
+                    function redirectToCadastroPage() {
+                        window.location.href = "/home/cadastro"; // Redireciona para a rota /login
+                    }
+                </script>
+            <div id="cadastro">
+                <img src="./Img/horizontal.png" style="width: 75px;" alt="">
+                <p>Cadastro</p>
+            </div>
+            </a>
+            
+            <a onclick="redirectToPacientePage()">
+                <script>
+                    function Off(){
+                        window.location.href = "/off"
+                    }
+                    function redirectToPacientePage() {
+                        window.location.href = "/home/pacientes"; // Redireciona para a rota /login
+                    }
+                </script>
+            <div id="pacientes">
+                <img src="./Img/more people.png" style="transform: translateY(10px);" alt="">
+                <p style="transform: translateY(10px);">Pacientes</p>
+            </div>
+        </a>
+            <a onclick="redirectToperfilPage()">
+                <script>
+                    function redirectToperfilPage() {
+                        window.location.href = "/home/perfil"; // Redireciona para a rota /login
+                    }
+                </script>
+            <div id="perfil">
+                <img src="./Img/people.png" style="transform: translateY(15px);">
+                <p style="transform: translateY(5px);">Perfil</p>
+            </div>
+        </a>
+            
+            
+        </menu>
+    </corpo>
+    <script src="./JS/acshome.js"></script>
+</body>
+</html>

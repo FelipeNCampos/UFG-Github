@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobrevidasCB</title>
+    <link rel="stylesheet" href="style/esqsenha.css" />
+    <link rel="icon" href="../img/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js" defer></script>
+    <script src="main/validaremail.js" defer></script>
+</head>
+<body>
+    <form action="/submitpass" method="post">
+
+        <div class="divmaior"> <img src="../img/blurfundo.png" style="border-radius: 30px; position: absolute;"> 
+            <div class="LOGO"> <img src="../img/logo.png" alt="LOGO"> </div>
+            <p class="sobrevidas">
+                <span style="color: white;">SobreVidas</span>
+                <span style="color: #9BCCFA;">CB</span>
+        </p>
+        <h1 class="Esqueceu">Esqueceu Senha</h1>
+        
+        <div class="Digite">
+            <label for="email">Digite o seu email</label>
+        </div>
+        <div id="inpemail">
+            <input type="text" id="email" name="email" placeholder="Email">
+        </div>
+        <button class="botao" type="submit" >Enviar Senha</button>
+        <script>
+            function redirectToLoginPage(){
+                window.location.href = "/login";
+            }
+        
+            </script>
+        <div class="login">
+            <a onclick="redirectToLoginPage()">Login</a>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

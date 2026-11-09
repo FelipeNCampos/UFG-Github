@@ -1,0 +1,13 @@
+var 
+    int x,y;
+
+
+incio
+    leia linha guarde em x
+    leia linha guarde em y
+    se x%2=0:
+        para c de x ate x+y de 2 em 2 faca:
+            escreva c+" "
+    senao:
+        escreva "O PRIMEIRO NUMERO NAO E PAR "
+fim

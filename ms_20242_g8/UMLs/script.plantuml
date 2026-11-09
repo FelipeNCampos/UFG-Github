@@ -1,0 +1,74 @@
+@startuml
+class Usuario {
+    +id: int
+    +nome_usuario: String
+    +senha: String
+    +email: String
+    +primeiro_nome: String
+    +ultimo_nome: String
+    +funcionario: Boolean
+    +ativo: Boolean
+    +super_usuario: Boolean
+    +ultimo_login: DateTime
+    +data_registro: DateTime
+}
+
+class ImagemLivro {
+    +id: int
+    +livro: Livro
+    +imagem: String
+    +data_criacao: DateTime
+    +data_atualizacao: DateTime
+}
+
+class Livro {
+    +id: int
+    +titulo: String
+    +autor: String
+    +edicao: String
+    +ano: int
+    +paginas: int
+    +editora: String
+    +data_criacao: DateTime
+    +data_atualizacao: DateTime
+    +proprietario: Usuario
+}
+
+class Anuncio {
+    +id: int
+    +titulo: String
+    +livro: Livro
+    +status: String
+    +criado_por: Usuario
+    +data_criacao: DateTime
+    +data_atualizacao: DateTime
+}
+
+class Avaliacao {
+    +id: int
+    +livro: Livro
+    +usuario: Usuario
+    +comentario: String
+    +nota: int
+    +data_criacao: DateTime
+}
+
+class OfertaAnuncio {
+    +id: int
+    +anuncio: Anuncio
+    +usuario: Usuario
+    +livro_ofertado: Livro
+    +comentario: String
+    +aceito: Boolean
+    +data_criacao: DateTime
+}
+Usuario "1" -- "*" Livro : possui >
+Usuario "1" -- "*" Anuncio : cria >
+Usuario "1" -- "*" Avaliacao : "escreve >"
+Usuario "1" -- "*" OfertaAnuncio : "faz >"
+Livro "1" -- "*" ImagemLivro : contem >
+Livro "1" -- "*" Avaliacao : "recebe >"
+Livro "1" -- "*" Anuncio : "listado em >"
+Livro "1" -- "*" OfertaAnuncio : "oferecido como >"
+Anuncio "1" -- "*" OfertaAnuncio : "tem >"
+@enduml

@@ -1,0 +1,9 @@
+var
+    int a,b,c;
+
+inicio
+    leia linha grave em a
+    leia linha grave em b
+    leia linha grave em c
+    escreva "O VALOR DE DELTA E = "+(b*b)-(4*a*c)
+fim

@@ -1,0 +1,12 @@
+:root{
+    --clr-azul-escuro : #0216C5;
+    --clr-azul-claro : #9BCCFA;
+}
+
+body{
+    background-color : var(--clr-azul-claro);
+    display: grid;
+    grid-template-columns: 90px 310px 110px 110px 310px;
+    grid-template-rows: 90px 310px 110px 110px 310px;
+
+}

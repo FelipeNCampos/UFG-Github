@@ -1,0 +1,86 @@
+{% extends 'base_home.html' %}
+
+{% block title %}
+	Detalhes do Anúncio - {{ announcement.title }}
+{% endblock %}
+
+{% block home_content %}
+	<div class="container mt-5">
+		<h2 class="text-primary text-center">Detalhes do Anúncio</h2>
+		<div class="card mt-4">
+			<div class="card-header">
+				<h3>{{ announcement.book.title }}</h3>
+			</div>
+			<div class="card-body">
+				{% if announcement.book.author %}
+					<p><strong>Autor:</strong> {{ announcement.book.author }}</p>
+				{% endif %}
+
+				{% if announcement.book.publisher %}
+					<p><strong>Editora:</strong> {{ announcement.book.publisher }}</p>
+				{% endif %}
+
+				{% if announcement.book.year %}
+					<p><strong>Ano:</strong> {{ announcement.book.year }}</p>
+				{% endif %}
+
+				{% if announcement.book.pages %}
+					<p><strong>Páginas:</strong> {{ announcement.book.pages }}</p>
+				{% endif %}
+
+				{% if announcement.get_status_display %}
+					<p><strong>Status:</strong> {{ announcement.get_status_display }}</p>
+				{% endif %}
+
+				<div class="row">
+					{% for image in announcement.book.images.all %}
+						<div class="col-md-4 mb-3">
+							<img src="{{ image.image.url }}" class="img-fluid img-thumbnail" alt="{{ announcement.book.title }}">
+						</div>
+					{% empty %}
+						<p class="text-muted">Nenhuma imagem disponível para este livro.</p>
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="card-footer">
+				{% if user_offer %}
+					<p><strong>Status da sua oferta:</strong>
+						{% if user_offer.accepted is None %}
+							Pendente
+						{% elif user_offer.accepted %}
+							Aceita
+						{% else %}
+							Recusada
+						{% endif %}
+					</p>
+				{% else %}
+					<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#offerModal">Realizar Oferta</button>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% if not user_offer %}
+		<div class="modal fade" id="offerModal" tabindex="-1" aria-labelledby="offerModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<form method="post" action="{% url 'detail_announcement' announcement.pk %}">
+						{% csrf_token %}
+						<div class="modal-header">
+							<h5 class="modal-title" id="offerModalLabel">Realizar Oferta</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							{{ form.as_p }}
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+							<button type="submit" class="btn btn-primary">Enviar Oferta</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}

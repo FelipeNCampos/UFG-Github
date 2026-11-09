@@ -1,0 +1,26 @@
+var
+    int temp;
+    string reg;
+
+
+inicio
+    leia linha.strip() guarde em reg
+    se reg[2]='R':
+        temp = 5 + (0,05*reg[1])
+
+    se reg[2]='C':
+        se reg[1] <=80 :
+            temp =500
+        senao:
+            temp = 500 + (0,25*reg[1])
+
+
+    se reg[2]='I':
+        se reg[1]<=100:
+            temp = 800
+        senao:
+            temp = 800 + (0,04*reg[1])
+    escreva "CONTA = "+reg[0]
+    escreva "VALOR DA CONTA" +temp
+
+fim

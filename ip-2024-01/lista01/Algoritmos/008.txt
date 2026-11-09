@@ -1,0 +1,8 @@
+var
+    int temp1,temp2;
+
+inicio
+    leia linha guarde em temp1        
+    leia linha guarde em temp2
+    escreva "O VALOR DE CUSTO E = "+(2(3.14159*(temp1*temp1))+(2*3.14159*temp1*temp2))*100
+fim

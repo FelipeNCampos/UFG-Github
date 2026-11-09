@@ -1,0 +1,11 @@
+/assinador-verificador/build/
+/dist/
+CLAUDE.md
+assinador-verificador/.idea/
+assinador-verificador/src/main/main.iml
+assinador-verificador/src/test/test.iml
+assinado.json 
+entrada.json
+saida.json
+assinador-cli/assinador-cli.exe
+simulador-cli/simulador-cli.exe

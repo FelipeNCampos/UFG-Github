@@ -1,0 +1,12 @@
+var
+    int temp;
+
+
+inicio
+    leia linha grave em temp
+    se temp%3=0 e temp%5=0:
+        escreva "O NUMERO E DIVISIVEL"
+    senao:
+        escreva "O NUMERO NAO E DIVISIVEL"
+
+fim

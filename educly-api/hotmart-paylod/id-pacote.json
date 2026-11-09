@@ -1,0 +1,17 @@
+{
+  "product_01KEZ83ACWTYCKQ3EB24MMPFZM": "base",
+  "product_01KEZ9HH94AJM2NQXQPYPBFHWF": "base",
+  "product_01KEZQQZ898SN6M45C1E3WCRPY": "base",
+  "7018201": "base",
+  "01KFH6TYKXMKQ5AJQJ4PZZ1G43": "base",
+  "01KFHKR3GQBV995WFEGPAXYTPQ": "base",
+  "01KF3ZG2F9N10HA5FQDQ0FDXSB": "base",
+  "01KF4029KCA1QPQXXCMGN69DV9": "freelancer",
+  "7031196": "freelancer",
+  "01KG88G787M4W70J3GGAVS6RM1": "ai_hub",
+  "7179838": "ai_hub",
+  "7181563": "combo_freelancer_ai"
+}
+
+
+python scripts/import_content_seed.py --seed-file tmp/desafio_iniciante_ia/db_seed.json --api-base-url http://localhost:8000 --upsert

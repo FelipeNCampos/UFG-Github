@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/Img/logo.png">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="/Style/perfilpaciente.css">
+</head>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+.fundo {
+  width: 540px;
+  height: 760px;
+  border-radius: 40px;
+
+  background-color: #AED5F2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -380px;
+  margin-left: -270px;
+}
+
+#popup {
+    margin-top: -50px;
+}
+
+.hd {
+  /* Textos grandes em negrito  */
+  font-family: Source Sans Pro, sans-serif;
+  margin-top: 60px;
+  size:26px;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 26px;
+  padding-left: 19px;
+  padding-top: 3px;
+  margin-bottom: 10px;
+}
+
+.subhd {
+  margin-bottom: 1px;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: left; 
+}
+
+.subhd2 {
+  margin-bottom: 1px;
+  font-family: Source Sans Pro,sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 26px;
+  text-align: left; 
+  margin-top:10px;
+}
+
+.descrição2 {
+  margin-top: 0px;
+  font-family: Source Sans Pro,sans-serif;
+  size: 10px;
+  width: 369px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  margin-bottom: 0px;
+}
+.descrição {
+  /* Textos menores que descrevem os textos grandes */
+  font-family: Source Sans Pro,sans-serif;
+  size: 10px;
+  width: 369px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  margin-top: 0px;
+  padding-left: 31px;
+}
+
+.seção-maior {
+  width: 420px;
+  margin-left: 44px;
+  margin-right:29px;
+  /* border: 2px solid #fff; */
+  border-radius: 15px;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+label span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+label span::after {
+  content:'';
+  position:absolute;
+  left: 14px;
+  bottom: 10px;
+  width: 0px;
+  height: 0px;
+  height: 0px;
+  border: solid #000000;
+  border-width: 0 6px 6px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.endereco {
+    margin-top: 10px;
+}
+.informacao{
+    top: -200px;
+}
+
+input:checked ~ span::after {
+  width: 20px;
+  height: 40px;
+  opacity: 1;
+}
+
+.botão {
+width: 261px;
+height: 55px;
+top: 666px;
+left: 139px;
+gap: 0px;
+opacity: 0px;
+background-color: #0216c5;
+color:white;
+border:none;
+font-family:Source Sans Pro, sans-serif;
+font-size: 22px;
+font-weight:900;
+border-radius:50px;
+position:absolute;
+cursor:pointer;
+}
+
+.botão:active {
+  background-color:#2636c2;
+}
+
+</style>
+<body   >
+
+    <corpo>
+        <header>
+            <a onclick="redirectToHomePage()" t>
+                <img src="/Img/voltar.png" id="btnvoltar" alt="botao para voltar" >
+                <script>
+                    function redirectToHomePage() {
+                        window.location.href = "/home/pacientes"; // Redireciona para a rota /acshome
+                    }
+                </script>
+            </a>
+            <h1 style="position: relative;left: -80px;  white-space: nowrap; font-size: 44px; top: 0px;">Perfil do(a) Paciente:</h1>
+        </header>
+        <aside>
+            <div style="margin-left: 50px; ">
+
+                <div class="linha" style="position: absolute; top: 255px;">
+                    <div>
+                        <p class="subhd2" style="font-size: 20px;">Possui mais 40 anos</p>
+                        <p class="descrição2">Homens + 40 anos</p>
+                    </div>
+                    <label style="left: -63px;">
+                        <input {{if .M40}}checked{{end}} style="margin-left: 30px;" type="checkbox" name="maisde40anos" disabled>
+                        <span></span>
+                    </label>
+                </div>
+                
+                <div class="linha" style="position: absolute; top: 370px;">
+                    <div>
+                        <p class="subhd">Etilista</p>
+                        <p class="descrição2">Faz consumo de álcool recorrentemente</p>
+                    </div>
+                    <label style="left: -63px;">
+                        <input {{if .Etilista}}checked{{end}} type="checkbox" name="etilista" disabled>
+                        <span></span>
+                    </label>
+                </div>
+                
+                <div class="linha" style="position: absolute; top: 435px;">
+                    <div>
+                        <p class="subhd">Possui alguma lesão na boca</p>
+                        <p class="descrição2">Algo como um machucado</p>
+                    </div>
+                    <label style="left: -63px; top: -4px;">
+                        <input {{if .Absteista}}checked{{end}} type="checkbox" name="lesaonaboca" disabled>
+                        <span></span>
+                    </label>
+                </div>
+                
+                <div class="linha" style="position: absolute; top: 310px;">
+                    <div>
+                        <p class="subhd">Tabagista</p>
+                        <p class="descrição2">Fuma algum tipo de substância</p>
+                    </div>
+                    <label style="left: -63px;">
+                        <input {{if .Tabagista}}checked{{end}} type="checkbox" name="tabagista" disabled>
+                        <span></span>
+                    </label>
+                </div>
+                
+                </div>
+                <div class="linha" style="position: absolute; margin-left: 430px; margin-top: -50px;">
+                    <div>
+                        <p class="subhd2" style="font-size: 22px;">Portador de<br>deficiência</p>
+                    </div>
+                    <label style="left: 47px;">
+                        <input  {{if .Deficiente}}checked{{end}} type="checkbox" name="deficiente" disabled>
+                        <span></span>
+                    </label>
+                </div>
+                
+      
+            <h2 class="informacao">Informações Pessoais:</h2>
+            <h3 id="nome"><subinf>Nome Completo:</subinf><br> {{.Nome}}</h3>
+            <h3 id="mae"><subinf>Nome Completo da Mãe:</subinf><br> {{.Mae}}</h3>
+            <div id="cpftel">
+                <h4 id="cpf"><subinf>CPF:</subinf><br> {{.CPF}}</h4>
+                <h4 id="tel"><subinf>Telefone:</subinf><br>{{.Telefone}}</h4>
+                <h4 id="genero"><subinf>Gênero:</subinf><br>{{.Gen}}</h4>
+                <h4 id="nascimento"><subinf>Data De Nascimento:</subinf><br> {{.Nascimento}}</h4>
+            </div>
+            <h3 id="email"><subinf>Email:</subinf><br> {{.Email}}</h3>
+            <h2 id="ddsprof" class="endereco">Endereço</h2>
+            <div id="inecnes">
+                <h4 id="ine"><subinf>UF:</subinf><br> {{.UF}}</h4>
+                <h4 id="cnes"><subinf>Município:</subinf><br> {{.Municipio}}</h4>
+            </div>
+            <div id="cbocns">
+                <h4 id="cbo"><subinf>CEP:</subinf><br> {{.CEP}}</h4>
+                <h4 id="cns"><subinf>Número:</subinf><br> {{.Num_casa}}</h4>
+            </div>
+            <h3 ><subinf>Complemento:</subinf><br> {{.Complemento}}</h3>
+            <div>
+                <h3 ><subinf>Status:</subinf><br> {{.Situacao}}</h3>
+            </div>
+        </aside>
+        
+    </corpo>
+</body>
+</html>

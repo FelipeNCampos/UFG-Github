@@ -1,0 +1,65 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  release:
+    name: Build, sign and publish
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: "1.22.x"
+          cache-dependency-path: |
+            assinador-cli/go.sum
+            simulador-cli/go.sum
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Cosign
+        uses: sigstore/cosign-installer@v3
+
+      - name: Build artifacts
+        shell: pwsh
+        run: |
+          $version = $env:GITHUB_REF_NAME.TrimStart("v")
+          ./scripts/build-release.ps1 -Version $version
+
+      - name: Sign artifacts
+        shell: pwsh
+        run: |
+          $files = Get-ChildItem -Path dist -File |
+            Sort-Object Name
+
+          foreach ($file in $files) {
+            cosign sign-blob `
+              --yes `
+              --output-signature "$($file.FullName).sig" `
+              --output-certificate "$($file.FullName).pem" `
+              "$($file.FullName)"
+          }
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: false
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          generate_release_notes: true
+          files: |
+            dist/*

@@ -1,0 +1,10 @@
+var
+    int temp;
+    string reg;
+
+inicio
+    leia linha.strip() guarde em reg
+    para c de int(reg[0]) ate int(reg[0]+(reg[2]-1)*reg[1]) de int(reg[1]) em int(reg[1]) faca:
+        temp = temp+c
+    escreva temp
+fim

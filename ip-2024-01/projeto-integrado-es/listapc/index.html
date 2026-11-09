@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+    <div class="divmaior">
+        <menu>
+            
+            <div class="seta"> 
+                <a href="login.html"> <img src="../Sources/Icons/botao_voltar.png" alt=""> </a>
+            </div>
+            <h1 class="header">Lista De Pacientes Cadastrados</h1>
+        </menu>
+        <div id="fundobranco">
+            <h5 class="info" id="buscarlabel"> Buscar</h5>
+            <h5 id="topoinpcpf">Digite o CPF (somente numeros) do paciente </h5>
+            <div class="inp-wrapper">
+                <input type="text" name="CPF" id="cpf" placeholder="CPF . . .">
+                <i class="fa fa-search" onclick="pesquisarpaciente()"></i>
+            </div>
+            <h5 id="cad">Pacientes Cadastrados</h5>
+            <div class="containerresultados">
+                <cardpass id="cardpc">
+                    <h6 class="infoid">Nome do paciente</h6>
+                    <h6 class="infoid">CPF</h6>
+                    <h5 class="info">Nome completo do paciente</h5>
+                    <h5 class="info">123.123.123-00</h5>
+                    <div class="subcardidsx">
+                        <h6 class="infoid">Idade :</h6>
+                        <h5 class="supinfo">55</h5>
+                        <h6 class="infoid">Sexo :</h6>
+                        <h5 class="supinfo">Feminino</h5>
+                    </div>
+                    <div class="subcardtel">
+                        <h6 class="infoid">Telefone :</h6>
+                        <h5 class="info" id="tel">(62)99999-9999</h5>
+                    </div>
+    
+                </cardpass>
+                <cardpass id="cardpc">
+                    <h6 class="infoid">Nome do paciente</h6>
+                    <h6 class="infoid">CPF</h6>
+                    <h5 class="info">Nome completo do paciente</h5>
+                    <h5 class="info">123.123.123-00</h5>
+                    <div class="subcardidsx">
+                        <h6 class="infoid">Idade :</h6>
+                        <h5 class="supinfo">55</h5>
+                        <h6 class="infoid">Sexo :</h6>
+                        <h5 class="supinfo">Feminino</h5>
+                    </div>
+                    <div class="subcardtel">
+                        <h6 class="infoid">Telefone :</h6>
+                        <h5 class="info" id="tel">(62)99999-9999</h5>
+                    </div>
+    
+                </cardpass>
+                <cardpass id="cardpc">
+                    <h6 class="infoid">Nome do paciente</h6>
+                    <h6 class="infoid">CPF</h6>
+                    <h5 class="info">Nome completo do paciente</h5>
+                    <h5 class="info">123.123.123-00</h5>
+                    <div class="subcardidsx">
+                        <h6 class="infoid">Idade :</h6>
+                        <h5 class="supinfo">55</h5>
+                        <h6 class="infoid">Sexo :</h6>
+                        <h5 class="supinfo">Feminino</h5>
+                    </div>
+                    <div class="subcardtel">
+                        <h6 class="infoid">Telefone :</h6>
+                        <h5 class="info" id="tel">(62)99999-9999</h5>
+                    </div>
+    
+                </cardpass>
+                <cardpass id="cardpc">
+                    <h6 class="infoid">Nome do paciente</h6>
+                    <h6 class="infoid">CPF</h6>
+                    <h5 class="info">Nome completo do paciente</h5>
+                    <h5 class="info">123.123.123-00</h5>
+                    <div class="subcardidsx">
+                        <h6 class="infoid">Idade :</h6>
+                        <h5 class="supinfo">55</h5>
+                        <h6 class="infoid">Sexo :</h6>
+                        <h5 class="supinfo">Feminino</h5>
+                    </div>
+                    <div class="subcardtel">
+                        <h6 class="infoid">Telefone :</h6>
+                        <h5 class="info" id="tel">(62)99999-9999</h5>
+                    </div>
+    
+                </cardpass>
+                <cardpass id="cardpc">
+                    <h6 class="infoid">Nome do paciente</h6>
+                    <h6 class="infoid">CPF</h6>
+                    <h5 class="info">Nome completo do paciente</h5>
+                    <h5 class="info">123.123.123-00</h5>
+                    <div class="subcardidsx">
+                        <h6 class="infoid">Idade :</h6>
+                        <h5 class="supinfo">55</h5>
+                        <h6 class="infoid">Sexo :</h6>
+                        <h5 class="supinfo">Feminino</h5>
+                    </div>
+                    <div class="subcardtel">
+                        <h6 class="infoid">Telefone :</h6>
+                        <h5 class="info" id="tel">(62)99999-9999</h5>
+                    </div>
+    
+                </cardpass>
+                <cardpass id="cardpc">
+                    <h6 class="infoid">Nome do paciente</h6>
+                    <h6 class="infoid">CPF</h6>
+                    <h5 class="info">Nome completo do paciente</h5>
+                    <h5 class="info">123.123.123-00</h5>
+                    <div class="subcardidsx">
+                        <h6 class="infoid">Idade :</h6>
+                        <h5 class="supinfo">55</h5>
+                        <h6 class="infoid">Sexo :</h6>
+                        <h5 class="supinfo">Feminino</h5>
+                    </div>
+                    <div class="subcardtel">
+                        <h6 class="infoid">Telefone :</h6>
+                        <h5 class="info" id="tel">(62)99999-9999</h5>
+                    </div>
+    
+                </cardpass>
+                <cardpass class="cardpc">
+                    <h6 class="infoid">Nome do paciente</h6>
+                    <h6 class="infoid">CPF</h6>
+                    <h5 class="info">Nome completo do paciente</h5>
+                    <h5 class="info">123.123.123-00</h5>
+                    <div class="subcardidsx">
+                        <h6 class="infoid">Idade :</h6>
+                        <h5 class="supinfo">55</h5>
+                        <h6 class="infoid">Sexo :</h6>
+                        <h5 class="supinfo">Feminino</h5>
+                    </div>
+                    <div class="subcardtel">
+                        <h6 class="infoid">Telefone :</h6>
+                        <h5 class="info" id="tel">(62)99999-9999</h5>
+                    </div>
+    
+                </cardpass>
+
+            </div>
+
+
+        </div>
+    
+
+
+    
+    </div>
+    <script>
+        function pesquisarpaciente(cpf){
+            document.getElementsByClassName("cardpc").
+        }
+    </script>
+</body>
+</html> 

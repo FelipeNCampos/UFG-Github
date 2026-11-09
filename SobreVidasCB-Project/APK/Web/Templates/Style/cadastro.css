@@ -1,0 +1,177 @@
+*{
+    margin: 0px;
+}
+
+body{
+    display: grid;
+    justify-items: center;
+    background-color: black;
+}
+
+conteudo{
+    width: 724px;
+    background-color: #9BCCFA;
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 10px;
+    background-image: url(../Img/fundo.png);
+}
+
+menu{
+    display: grid;
+    grid-template: 100px/200px auto;
+    justify-items: center;
+    align-items: center;
+    margin-left: -40px;
+}
+#votlar{
+    margin-left: -20px;
+}
+
+#voltar:hover{
+    transform:translateY(-5px);
+    filter: drop-shadow(2px 2px 2px gray);
+}
+
+h1{
+
+    color: white;
+    font-size: 50px;
+    
+}
+h2{
+    font-size: 45px;
+    color: gray;
+}
+h3{
+    font-size: 30px;
+    margin: 30px;
+    margin-left: 0px;
+}
+#logoalt{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+form{
+    background-color: white;
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 25px;
+    padding: 50px;
+}
+
+
+logotop{
+    display: grid;
+    grid-template: 200px/auto auto;
+
+}
+popup{
+    background-color: #9BCCFA;
+    padding: 30px;
+    border-radius: 20px;
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    display: none;
+}
+#check{
+    size: 20px;
+}
+
+bi{
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    font-size: 20px;
+    margin: 10px;
+}
+
+bm{
+    display: grid;
+    grid-template: auto/auto auto;
+    color: gray;
+    font-size: 20px;
+    margin: 10px;
+    gap: 10px;
+}
+bmm{
+    display: flex;
+    flex-direction: column;
+}
+input,select{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+select{
+    border: 2px solid black;
+    font-size: 15px;
+}
+
+upt{
+    display: grid;
+    margin-left: 10px;
+    grid-template-columns: 80px auto;
+    gap: 20px;
+}
+
+#uf{
+    width: 80px;
+}
+#municipio{
+    width: 300px;
+}
+#openPopup{
+    width: 200px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 30PX;
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    margin-left: 33%;
+}
+
+#btnprox:hover{
+    background-color: rgb(92, 92, 223);
+    filter: drop-shadow(2px 2px 2px gray);
+}
+
+box{
+    display: flex;
+    flex-direction: column;
+
+}
+
+check{
+    font-size: 25px;
+    color: black;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+#check{
+    height: 30px;
+    margin-block: 20px;
+}
+#btnsub{
+    padding: 20px;
+    border-radius: 30px;
+    width: 200px;
+    margin-left: 150px;
+    font-size: 20px;
+    margin-top: 30px;
+    border: none;
+    background-color: blue;
+}
+#btnsub:hover{
+    background-color: rgb(92, 92, 223);
+    filter: drop-shadow(2px 2px 2px gray);
+}

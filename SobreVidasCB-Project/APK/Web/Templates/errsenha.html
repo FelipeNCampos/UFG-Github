@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pe-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SobrevidasCB</title>
+    <link rel="stylesheet" href="./style/token.css" />
+    <link rel="icon" href="./Img/logo.png">
+    <style>
+        /* Adicione seu estilo CSS aqui */
+    </style>
+</head>
+<body>
+    <div class="divmaior">
+        <img src="./Img/blurfundo.png" style="border-radius: 30px; position: absolute;">
+        <div class="LOGO">
+            <img src="./Img/logo.png" alt="LOGO">
+        </div>
+        <p class="sobrevidas">
+            <span style="color: white;">SobreVidas</span>
+            <span style="color: #9BCCFA;">CB</span>
+        </p>
+        <h1 class="Esqueceu">Login e senha não correspondem !</h1>
+
+        <button id="enviarCodigoBtn" class="botao" onclick="redirectToLoginPage()" style="margin-top: 150px;">Início</button>
+        <script>
+            function redirectToLoginPage() {
+                window.location.href = "/"; // Redireciona para a rota /login
+            }
+        </script>
+    </div>
+</body>
+</html>

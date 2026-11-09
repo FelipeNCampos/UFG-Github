@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --corprim : #2260FF;
+    --ff : "Montserrat", sans-serif;
+    --corsec : #0216C5;
+
+}
+
+
+body{
+    background-color: var(--corprim);
+    display: flex;
+    justify-content: center;
+
+}
+corpo{
+    background-image: url(../Sources/Imgs/fundolg-in.png);
+    display: grid;
+    justify-content: center;
+    width: 744px;
+    height: 850px;
+    border-radius: 15px;
+    padding-top: 100px;
+    box-shadow: 6px 6px 24px var(--corsec),-6px -6px 24px gray;
+}
+#img{
+    display: grid   ;
+    justify-content: center;
+}
+#Logo{
+    filter: drop-shadow(1px 1px 30px var(--corsec))
+}
+#altlogo{
+    display: grid;
+    color: var(--corsec);
+    font-size: 30px;
+    font-family: "inherit";
+    justify-content: center;
+}
+#cb{
+    color: white;
+}
+
+button{
+    width: 300px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: inherit;
+    background-image: linear-gradient(to right, var(--corsec) 0%,var(--corprim) 50%);
+    border: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #64b4f8;
+    color: aliceblue;
+}
+
+#buttons{
+    display: grid;
+    row-gap: 50px;
+    justify-content: center;
+    
+}
+
